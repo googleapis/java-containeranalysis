@@ -40,7 +40,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler",
+    value = "by gRPC proto compiler (version 1.10.0)",
     comments = "Source: google/devtools/containeranalysis/v1beta1/containeranalysis.proto")
 public final class ContainerAnalysisV1Beta1Grpc {
 
@@ -50,18 +50,26 @@ public final class ContainerAnalysisV1Beta1Grpc {
       "google.devtools.containeranalysis.v1beta1.ContainerAnalysisV1Beta1";
 
   // Static method descriptors that strictly reflect the proto.
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getSetIamPolicyMethod()} instead.
+  public static final io.grpc.MethodDescriptor<
+          com.google.iam.v1.SetIamPolicyRequest, com.google.iam.v1.Policy>
+      METHOD_SET_IAM_POLICY = getSetIamPolicyMethodHelper();
+
   private static volatile io.grpc.MethodDescriptor<
           com.google.iam.v1.SetIamPolicyRequest, com.google.iam.v1.Policy>
       getSetIamPolicyMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "SetIamPolicy",
-      requestType = com.google.iam.v1.SetIamPolicyRequest.class,
-      responseType = com.google.iam.v1.Policy.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static io.grpc.MethodDescriptor<
           com.google.iam.v1.SetIamPolicyRequest, com.google.iam.v1.Policy>
       getSetIamPolicyMethod() {
+    return getSetIamPolicyMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<
+          com.google.iam.v1.SetIamPolicyRequest, com.google.iam.v1.Policy>
+      getSetIamPolicyMethodHelper() {
     io.grpc.MethodDescriptor<com.google.iam.v1.SetIamPolicyRequest, com.google.iam.v1.Policy>
         getSetIamPolicyMethod;
     if ((getSetIamPolicyMethod = ContainerAnalysisV1Beta1Grpc.getSetIamPolicyMethod) == null) {
@@ -72,7 +80,10 @@ public final class ContainerAnalysisV1Beta1Grpc {
                   io.grpc.MethodDescriptor
                       .<com.google.iam.v1.SetIamPolicyRequest, com.google.iam.v1.Policy>newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetIamPolicy"))
+                      .setFullMethodName(
+                          generateFullMethodName(
+                              "google.devtools.containeranalysis.v1beta1.ContainerAnalysisV1Beta1",
+                              "SetIamPolicy"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
@@ -89,18 +100,26 @@ public final class ContainerAnalysisV1Beta1Grpc {
     return getSetIamPolicyMethod;
   }
 
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getGetIamPolicyMethod()} instead.
+  public static final io.grpc.MethodDescriptor<
+          com.google.iam.v1.GetIamPolicyRequest, com.google.iam.v1.Policy>
+      METHOD_GET_IAM_POLICY = getGetIamPolicyMethodHelper();
+
   private static volatile io.grpc.MethodDescriptor<
           com.google.iam.v1.GetIamPolicyRequest, com.google.iam.v1.Policy>
       getGetIamPolicyMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetIamPolicy",
-      requestType = com.google.iam.v1.GetIamPolicyRequest.class,
-      responseType = com.google.iam.v1.Policy.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static io.grpc.MethodDescriptor<
           com.google.iam.v1.GetIamPolicyRequest, com.google.iam.v1.Policy>
       getGetIamPolicyMethod() {
+    return getGetIamPolicyMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<
+          com.google.iam.v1.GetIamPolicyRequest, com.google.iam.v1.Policy>
+      getGetIamPolicyMethodHelper() {
     io.grpc.MethodDescriptor<com.google.iam.v1.GetIamPolicyRequest, com.google.iam.v1.Policy>
         getGetIamPolicyMethod;
     if ((getGetIamPolicyMethod = ContainerAnalysisV1Beta1Grpc.getGetIamPolicyMethod) == null) {
@@ -111,7 +130,10 @@ public final class ContainerAnalysisV1Beta1Grpc {
                   io.grpc.MethodDescriptor
                       .<com.google.iam.v1.GetIamPolicyRequest, com.google.iam.v1.Policy>newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetIamPolicy"))
+                      .setFullMethodName(
+                          generateFullMethodName(
+                              "google.devtools.containeranalysis.v1beta1.ContainerAnalysisV1Beta1",
+                              "GetIamPolicy"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
@@ -128,18 +150,26 @@ public final class ContainerAnalysisV1Beta1Grpc {
     return getGetIamPolicyMethod;
   }
 
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getTestIamPermissionsMethod()} instead.
+  public static final io.grpc.MethodDescriptor<
+          com.google.iam.v1.TestIamPermissionsRequest, com.google.iam.v1.TestIamPermissionsResponse>
+      METHOD_TEST_IAM_PERMISSIONS = getTestIamPermissionsMethodHelper();
+
   private static volatile io.grpc.MethodDescriptor<
           com.google.iam.v1.TestIamPermissionsRequest, com.google.iam.v1.TestIamPermissionsResponse>
       getTestIamPermissionsMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "TestIamPermissions",
-      requestType = com.google.iam.v1.TestIamPermissionsRequest.class,
-      responseType = com.google.iam.v1.TestIamPermissionsResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static io.grpc.MethodDescriptor<
           com.google.iam.v1.TestIamPermissionsRequest, com.google.iam.v1.TestIamPermissionsResponse>
       getTestIamPermissionsMethod() {
+    return getTestIamPermissionsMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<
+          com.google.iam.v1.TestIamPermissionsRequest, com.google.iam.v1.TestIamPermissionsResponse>
+      getTestIamPermissionsMethodHelper() {
     io.grpc.MethodDescriptor<
             com.google.iam.v1.TestIamPermissionsRequest,
             com.google.iam.v1.TestIamPermissionsResponse>
@@ -156,7 +186,10 @@ public final class ContainerAnalysisV1Beta1Grpc {
                           com.google.iam.v1.TestIamPermissionsResponse>
                           newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TestIamPermissions"))
+                      .setFullMethodName(
+                          generateFullMethodName(
+                              "google.devtools.containeranalysis.v1beta1.ContainerAnalysisV1Beta1",
+                              "TestIamPermissions"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
@@ -174,20 +207,30 @@ public final class ContainerAnalysisV1Beta1Grpc {
     return getTestIamPermissionsMethod;
   }
 
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getGetScanConfigMethod()} instead.
+  public static final io.grpc.MethodDescriptor<
+          com.google.containeranalysis.v1beta1.GetScanConfigRequest,
+          com.google.containeranalysis.v1beta1.ScanConfig>
+      METHOD_GET_SCAN_CONFIG = getGetScanConfigMethodHelper();
+
   private static volatile io.grpc.MethodDescriptor<
           com.google.containeranalysis.v1beta1.GetScanConfigRequest,
           com.google.containeranalysis.v1beta1.ScanConfig>
       getGetScanConfigMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetScanConfig",
-      requestType = com.google.containeranalysis.v1beta1.GetScanConfigRequest.class,
-      responseType = com.google.containeranalysis.v1beta1.ScanConfig.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static io.grpc.MethodDescriptor<
           com.google.containeranalysis.v1beta1.GetScanConfigRequest,
           com.google.containeranalysis.v1beta1.ScanConfig>
       getGetScanConfigMethod() {
+    return getGetScanConfigMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<
+          com.google.containeranalysis.v1beta1.GetScanConfigRequest,
+          com.google.containeranalysis.v1beta1.ScanConfig>
+      getGetScanConfigMethodHelper() {
     io.grpc.MethodDescriptor<
             com.google.containeranalysis.v1beta1.GetScanConfigRequest,
             com.google.containeranalysis.v1beta1.ScanConfig>
@@ -203,7 +246,10 @@ public final class ContainerAnalysisV1Beta1Grpc {
                           com.google.containeranalysis.v1beta1.ScanConfig>
                           newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetScanConfig"))
+                      .setFullMethodName(
+                          generateFullMethodName(
+                              "google.devtools.containeranalysis.v1beta1.ContainerAnalysisV1Beta1",
+                              "GetScanConfig"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
@@ -221,20 +267,30 @@ public final class ContainerAnalysisV1Beta1Grpc {
     return getGetScanConfigMethod;
   }
 
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getListScanConfigsMethod()} instead.
+  public static final io.grpc.MethodDescriptor<
+          com.google.containeranalysis.v1beta1.ListScanConfigsRequest,
+          com.google.containeranalysis.v1beta1.ListScanConfigsResponse>
+      METHOD_LIST_SCAN_CONFIGS = getListScanConfigsMethodHelper();
+
   private static volatile io.grpc.MethodDescriptor<
           com.google.containeranalysis.v1beta1.ListScanConfigsRequest,
           com.google.containeranalysis.v1beta1.ListScanConfigsResponse>
       getListScanConfigsMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ListScanConfigs",
-      requestType = com.google.containeranalysis.v1beta1.ListScanConfigsRequest.class,
-      responseType = com.google.containeranalysis.v1beta1.ListScanConfigsResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static io.grpc.MethodDescriptor<
           com.google.containeranalysis.v1beta1.ListScanConfigsRequest,
           com.google.containeranalysis.v1beta1.ListScanConfigsResponse>
       getListScanConfigsMethod() {
+    return getListScanConfigsMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<
+          com.google.containeranalysis.v1beta1.ListScanConfigsRequest,
+          com.google.containeranalysis.v1beta1.ListScanConfigsResponse>
+      getListScanConfigsMethodHelper() {
     io.grpc.MethodDescriptor<
             com.google.containeranalysis.v1beta1.ListScanConfigsRequest,
             com.google.containeranalysis.v1beta1.ListScanConfigsResponse>
@@ -251,7 +307,10 @@ public final class ContainerAnalysisV1Beta1Grpc {
                           com.google.containeranalysis.v1beta1.ListScanConfigsResponse>
                           newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListScanConfigs"))
+                      .setFullMethodName(
+                          generateFullMethodName(
+                              "google.devtools.containeranalysis.v1beta1.ContainerAnalysisV1Beta1",
+                              "ListScanConfigs"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
@@ -270,20 +329,30 @@ public final class ContainerAnalysisV1Beta1Grpc {
     return getListScanConfigsMethod;
   }
 
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getUpdateScanConfigMethod()} instead.
+  public static final io.grpc.MethodDescriptor<
+          com.google.containeranalysis.v1beta1.UpdateScanConfigRequest,
+          com.google.containeranalysis.v1beta1.ScanConfig>
+      METHOD_UPDATE_SCAN_CONFIG = getUpdateScanConfigMethodHelper();
+
   private static volatile io.grpc.MethodDescriptor<
           com.google.containeranalysis.v1beta1.UpdateScanConfigRequest,
           com.google.containeranalysis.v1beta1.ScanConfig>
       getUpdateScanConfigMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "UpdateScanConfig",
-      requestType = com.google.containeranalysis.v1beta1.UpdateScanConfigRequest.class,
-      responseType = com.google.containeranalysis.v1beta1.ScanConfig.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static io.grpc.MethodDescriptor<
           com.google.containeranalysis.v1beta1.UpdateScanConfigRequest,
           com.google.containeranalysis.v1beta1.ScanConfig>
       getUpdateScanConfigMethod() {
+    return getUpdateScanConfigMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<
+          com.google.containeranalysis.v1beta1.UpdateScanConfigRequest,
+          com.google.containeranalysis.v1beta1.ScanConfig>
+      getUpdateScanConfigMethodHelper() {
     io.grpc.MethodDescriptor<
             com.google.containeranalysis.v1beta1.UpdateScanConfigRequest,
             com.google.containeranalysis.v1beta1.ScanConfig>
@@ -300,7 +369,10 @@ public final class ContainerAnalysisV1Beta1Grpc {
                           com.google.containeranalysis.v1beta1.ScanConfig>
                           newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateScanConfig"))
+                      .setFullMethodName(
+                          generateFullMethodName(
+                              "google.devtools.containeranalysis.v1beta1.ContainerAnalysisV1Beta1",
+                              "UpdateScanConfig"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
@@ -320,43 +392,19 @@ public final class ContainerAnalysisV1Beta1Grpc {
 
   /** Creates a new async stub that supports all call types for the service */
   public static ContainerAnalysisV1Beta1Stub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<ContainerAnalysisV1Beta1Stub> factory =
-        new io.grpc.stub.AbstractStub.StubFactory<ContainerAnalysisV1Beta1Stub>() {
-          @java.lang.Override
-          public ContainerAnalysisV1Beta1Stub newStub(
-              io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-            return new ContainerAnalysisV1Beta1Stub(channel, callOptions);
-          }
-        };
-    return ContainerAnalysisV1Beta1Stub.newStub(factory, channel);
+    return new ContainerAnalysisV1Beta1Stub(channel);
   }
 
   /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static ContainerAnalysisV1Beta1BlockingStub newBlockingStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<ContainerAnalysisV1Beta1BlockingStub> factory =
-        new io.grpc.stub.AbstractStub.StubFactory<ContainerAnalysisV1Beta1BlockingStub>() {
-          @java.lang.Override
-          public ContainerAnalysisV1Beta1BlockingStub newStub(
-              io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-            return new ContainerAnalysisV1Beta1BlockingStub(channel, callOptions);
-          }
-        };
-    return ContainerAnalysisV1Beta1BlockingStub.newStub(factory, channel);
+    return new ContainerAnalysisV1Beta1BlockingStub(channel);
   }
 
   /** Creates a new ListenableFuture-style stub that supports unary calls on the service */
   public static ContainerAnalysisV1Beta1FutureStub newFutureStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<ContainerAnalysisV1Beta1FutureStub> factory =
-        new io.grpc.stub.AbstractStub.StubFactory<ContainerAnalysisV1Beta1FutureStub>() {
-          @java.lang.Override
-          public ContainerAnalysisV1Beta1FutureStub newStub(
-              io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-            return new ContainerAnalysisV1Beta1FutureStub(channel, callOptions);
-          }
-        };
-    return ContainerAnalysisV1Beta1FutureStub.newStub(factory, channel);
+    return new ContainerAnalysisV1Beta1FutureStub(channel);
   }
 
   /**
@@ -394,7 +442,7 @@ public final class ContainerAnalysisV1Beta1Grpc {
     public void setIamPolicy(
         com.google.iam.v1.SetIamPolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.iam.v1.Policy> responseObserver) {
-      asyncUnimplementedUnaryCall(getSetIamPolicyMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getSetIamPolicyMethodHelper(), responseObserver);
     }
 
     /**
@@ -413,7 +461,7 @@ public final class ContainerAnalysisV1Beta1Grpc {
     public void getIamPolicy(
         com.google.iam.v1.GetIamPolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.iam.v1.Policy> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetIamPolicyMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetIamPolicyMethodHelper(), responseObserver);
     }
 
     /**
@@ -432,7 +480,7 @@ public final class ContainerAnalysisV1Beta1Grpc {
         com.google.iam.v1.TestIamPermissionsRequest request,
         io.grpc.stub.StreamObserver<com.google.iam.v1.TestIamPermissionsResponse>
             responseObserver) {
-      asyncUnimplementedUnaryCall(getTestIamPermissionsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getTestIamPermissionsMethodHelper(), responseObserver);
     }
 
     /**
@@ -446,7 +494,7 @@ public final class ContainerAnalysisV1Beta1Grpc {
         com.google.containeranalysis.v1beta1.GetScanConfigRequest request,
         io.grpc.stub.StreamObserver<com.google.containeranalysis.v1beta1.ScanConfig>
             responseObserver) {
-      asyncUnimplementedUnaryCall(getGetScanConfigMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetScanConfigMethodHelper(), responseObserver);
     }
 
     /**
@@ -460,7 +508,7 @@ public final class ContainerAnalysisV1Beta1Grpc {
         com.google.containeranalysis.v1beta1.ListScanConfigsRequest request,
         io.grpc.stub.StreamObserver<com.google.containeranalysis.v1beta1.ListScanConfigsResponse>
             responseObserver) {
-      asyncUnimplementedUnaryCall(getListScanConfigsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListScanConfigsMethodHelper(), responseObserver);
     }
 
     /**
@@ -474,47 +522,47 @@ public final class ContainerAnalysisV1Beta1Grpc {
         com.google.containeranalysis.v1beta1.UpdateScanConfigRequest request,
         io.grpc.stub.StreamObserver<com.google.containeranalysis.v1beta1.ScanConfig>
             responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateScanConfigMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateScanConfigMethodHelper(), responseObserver);
     }
 
     @java.lang.Override
     public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-              getSetIamPolicyMethod(),
+              getSetIamPolicyMethodHelper(),
               asyncUnaryCall(
                   new MethodHandlers<
                       com.google.iam.v1.SetIamPolicyRequest, com.google.iam.v1.Policy>(
                       this, METHODID_SET_IAM_POLICY)))
           .addMethod(
-              getGetIamPolicyMethod(),
+              getGetIamPolicyMethodHelper(),
               asyncUnaryCall(
                   new MethodHandlers<
                       com.google.iam.v1.GetIamPolicyRequest, com.google.iam.v1.Policy>(
                       this, METHODID_GET_IAM_POLICY)))
           .addMethod(
-              getTestIamPermissionsMethod(),
+              getTestIamPermissionsMethodHelper(),
               asyncUnaryCall(
                   new MethodHandlers<
                       com.google.iam.v1.TestIamPermissionsRequest,
                       com.google.iam.v1.TestIamPermissionsResponse>(
                       this, METHODID_TEST_IAM_PERMISSIONS)))
           .addMethod(
-              getGetScanConfigMethod(),
+              getGetScanConfigMethodHelper(),
               asyncUnaryCall(
                   new MethodHandlers<
                       com.google.containeranalysis.v1beta1.GetScanConfigRequest,
                       com.google.containeranalysis.v1beta1.ScanConfig>(
                       this, METHODID_GET_SCAN_CONFIG)))
           .addMethod(
-              getListScanConfigsMethod(),
+              getListScanConfigsMethodHelper(),
               asyncUnaryCall(
                   new MethodHandlers<
                       com.google.containeranalysis.v1beta1.ListScanConfigsRequest,
                       com.google.containeranalysis.v1beta1.ListScanConfigsResponse>(
                       this, METHODID_LIST_SCAN_CONFIGS)))
           .addMethod(
-              getUpdateScanConfigMethod(),
+              getUpdateScanConfigMethodHelper(),
               asyncUnaryCall(
                   new MethodHandlers<
                       com.google.containeranalysis.v1beta1.UpdateScanConfigRequest,
@@ -542,7 +590,11 @@ public final class ContainerAnalysisV1Beta1Grpc {
    * </pre>
    */
   public static final class ContainerAnalysisV1Beta1Stub
-      extends io.grpc.stub.AbstractAsyncStub<ContainerAnalysisV1Beta1Stub> {
+      extends io.grpc.stub.AbstractStub<ContainerAnalysisV1Beta1Stub> {
+    private ContainerAnalysisV1Beta1Stub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
     private ContainerAnalysisV1Beta1Stub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
@@ -570,7 +622,7 @@ public final class ContainerAnalysisV1Beta1Grpc {
         com.google.iam.v1.SetIamPolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.iam.v1.Policy> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getSetIamPolicyMethod(), getCallOptions()),
+          getChannel().newCall(getSetIamPolicyMethodHelper(), getCallOptions()),
           request,
           responseObserver);
     }
@@ -592,7 +644,7 @@ public final class ContainerAnalysisV1Beta1Grpc {
         com.google.iam.v1.GetIamPolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.iam.v1.Policy> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetIamPolicyMethod(), getCallOptions()),
+          getChannel().newCall(getGetIamPolicyMethodHelper(), getCallOptions()),
           request,
           responseObserver);
     }
@@ -614,7 +666,7 @@ public final class ContainerAnalysisV1Beta1Grpc {
         io.grpc.stub.StreamObserver<com.google.iam.v1.TestIamPermissionsResponse>
             responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getTestIamPermissionsMethod(), getCallOptions()),
+          getChannel().newCall(getTestIamPermissionsMethodHelper(), getCallOptions()),
           request,
           responseObserver);
     }
@@ -631,7 +683,7 @@ public final class ContainerAnalysisV1Beta1Grpc {
         io.grpc.stub.StreamObserver<com.google.containeranalysis.v1beta1.ScanConfig>
             responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetScanConfigMethod(), getCallOptions()),
+          getChannel().newCall(getGetScanConfigMethodHelper(), getCallOptions()),
           request,
           responseObserver);
     }
@@ -648,7 +700,7 @@ public final class ContainerAnalysisV1Beta1Grpc {
         io.grpc.stub.StreamObserver<com.google.containeranalysis.v1beta1.ListScanConfigsResponse>
             responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getListScanConfigsMethod(), getCallOptions()),
+          getChannel().newCall(getListScanConfigsMethodHelper(), getCallOptions()),
           request,
           responseObserver);
     }
@@ -665,7 +717,7 @@ public final class ContainerAnalysisV1Beta1Grpc {
         io.grpc.stub.StreamObserver<com.google.containeranalysis.v1beta1.ScanConfig>
             responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getUpdateScanConfigMethod(), getCallOptions()),
+          getChannel().newCall(getUpdateScanConfigMethodHelper(), getCallOptions()),
           request,
           responseObserver);
     }
@@ -689,7 +741,11 @@ public final class ContainerAnalysisV1Beta1Grpc {
    * </pre>
    */
   public static final class ContainerAnalysisV1Beta1BlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<ContainerAnalysisV1Beta1BlockingStub> {
+      extends io.grpc.stub.AbstractStub<ContainerAnalysisV1Beta1BlockingStub> {
+    private ContainerAnalysisV1Beta1BlockingStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
     private ContainerAnalysisV1Beta1BlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -715,7 +771,8 @@ public final class ContainerAnalysisV1Beta1Grpc {
      * </pre>
      */
     public com.google.iam.v1.Policy setIamPolicy(com.google.iam.v1.SetIamPolicyRequest request) {
-      return blockingUnaryCall(getChannel(), getSetIamPolicyMethod(), getCallOptions(), request);
+      return blockingUnaryCall(
+          getChannel(), getSetIamPolicyMethodHelper(), getCallOptions(), request);
     }
 
     /**
@@ -732,7 +789,8 @@ public final class ContainerAnalysisV1Beta1Grpc {
      * </pre>
      */
     public com.google.iam.v1.Policy getIamPolicy(com.google.iam.v1.GetIamPolicyRequest request) {
-      return blockingUnaryCall(getChannel(), getGetIamPolicyMethod(), getCallOptions(), request);
+      return blockingUnaryCall(
+          getChannel(), getGetIamPolicyMethodHelper(), getCallOptions(), request);
     }
 
     /**
@@ -750,7 +808,7 @@ public final class ContainerAnalysisV1Beta1Grpc {
     public com.google.iam.v1.TestIamPermissionsResponse testIamPermissions(
         com.google.iam.v1.TestIamPermissionsRequest request) {
       return blockingUnaryCall(
-          getChannel(), getTestIamPermissionsMethod(), getCallOptions(), request);
+          getChannel(), getTestIamPermissionsMethodHelper(), getCallOptions(), request);
     }
 
     /**
@@ -762,7 +820,8 @@ public final class ContainerAnalysisV1Beta1Grpc {
      */
     public com.google.containeranalysis.v1beta1.ScanConfig getScanConfig(
         com.google.containeranalysis.v1beta1.GetScanConfigRequest request) {
-      return blockingUnaryCall(getChannel(), getGetScanConfigMethod(), getCallOptions(), request);
+      return blockingUnaryCall(
+          getChannel(), getGetScanConfigMethodHelper(), getCallOptions(), request);
     }
 
     /**
@@ -774,7 +833,8 @@ public final class ContainerAnalysisV1Beta1Grpc {
      */
     public com.google.containeranalysis.v1beta1.ListScanConfigsResponse listScanConfigs(
         com.google.containeranalysis.v1beta1.ListScanConfigsRequest request) {
-      return blockingUnaryCall(getChannel(), getListScanConfigsMethod(), getCallOptions(), request);
+      return blockingUnaryCall(
+          getChannel(), getListScanConfigsMethodHelper(), getCallOptions(), request);
     }
 
     /**
@@ -787,7 +847,7 @@ public final class ContainerAnalysisV1Beta1Grpc {
     public com.google.containeranalysis.v1beta1.ScanConfig updateScanConfig(
         com.google.containeranalysis.v1beta1.UpdateScanConfigRequest request) {
       return blockingUnaryCall(
-          getChannel(), getUpdateScanConfigMethod(), getCallOptions(), request);
+          getChannel(), getUpdateScanConfigMethodHelper(), getCallOptions(), request);
     }
   }
 
@@ -809,7 +869,11 @@ public final class ContainerAnalysisV1Beta1Grpc {
    * </pre>
    */
   public static final class ContainerAnalysisV1Beta1FutureStub
-      extends io.grpc.stub.AbstractFutureStub<ContainerAnalysisV1Beta1FutureStub> {
+      extends io.grpc.stub.AbstractStub<ContainerAnalysisV1Beta1FutureStub> {
+    private ContainerAnalysisV1Beta1FutureStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
     private ContainerAnalysisV1Beta1FutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -837,7 +901,7 @@ public final class ContainerAnalysisV1Beta1Grpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.iam.v1.Policy>
         setIamPolicy(com.google.iam.v1.SetIamPolicyRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getSetIamPolicyMethod(), getCallOptions()), request);
+          getChannel().newCall(getSetIamPolicyMethodHelper(), getCallOptions()), request);
     }
 
     /**
@@ -856,7 +920,7 @@ public final class ContainerAnalysisV1Beta1Grpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.iam.v1.Policy>
         getIamPolicy(com.google.iam.v1.GetIamPolicyRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetIamPolicyMethod(), getCallOptions()), request);
+          getChannel().newCall(getGetIamPolicyMethodHelper(), getCallOptions()), request);
     }
 
     /**
@@ -875,7 +939,7 @@ public final class ContainerAnalysisV1Beta1Grpc {
             com.google.iam.v1.TestIamPermissionsResponse>
         testIamPermissions(com.google.iam.v1.TestIamPermissionsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getTestIamPermissionsMethod(), getCallOptions()), request);
+          getChannel().newCall(getTestIamPermissionsMethodHelper(), getCallOptions()), request);
     }
 
     /**
@@ -889,7 +953,7 @@ public final class ContainerAnalysisV1Beta1Grpc {
             com.google.containeranalysis.v1beta1.ScanConfig>
         getScanConfig(com.google.containeranalysis.v1beta1.GetScanConfigRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetScanConfigMethod(), getCallOptions()), request);
+          getChannel().newCall(getGetScanConfigMethodHelper(), getCallOptions()), request);
     }
 
     /**
@@ -903,7 +967,7 @@ public final class ContainerAnalysisV1Beta1Grpc {
             com.google.containeranalysis.v1beta1.ListScanConfigsResponse>
         listScanConfigs(com.google.containeranalysis.v1beta1.ListScanConfigsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getListScanConfigsMethod(), getCallOptions()), request);
+          getChannel().newCall(getListScanConfigsMethodHelper(), getCallOptions()), request);
     }
 
     /**
@@ -917,7 +981,7 @@ public final class ContainerAnalysisV1Beta1Grpc {
             com.google.containeranalysis.v1beta1.ScanConfig>
         updateScanConfig(com.google.containeranalysis.v1beta1.UpdateScanConfigRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getUpdateScanConfigMethod(), getCallOptions()), request);
+          getChannel().newCall(getUpdateScanConfigMethodHelper(), getCallOptions()), request);
     }
   }
 
@@ -1044,12 +1108,12 @@ public final class ContainerAnalysisV1Beta1Grpc {
               result =
                   io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
                       .setSchemaDescriptor(new ContainerAnalysisV1Beta1FileDescriptorSupplier())
-                      .addMethod(getSetIamPolicyMethod())
-                      .addMethod(getGetIamPolicyMethod())
-                      .addMethod(getTestIamPermissionsMethod())
-                      .addMethod(getGetScanConfigMethod())
-                      .addMethod(getListScanConfigsMethod())
-                      .addMethod(getUpdateScanConfigMethod())
+                      .addMethod(getSetIamPolicyMethodHelper())
+                      .addMethod(getGetIamPolicyMethodHelper())
+                      .addMethod(getTestIamPermissionsMethodHelper())
+                      .addMethod(getGetScanConfigMethodHelper())
+                      .addMethod(getListScanConfigsMethodHelper())
+                      .addMethod(getUpdateScanConfigMethodHelper())
                       .build();
         }
       }
