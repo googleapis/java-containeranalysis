@@ -17,18 +17,9 @@
     <method>boolean has*(*)</method>
   </difference>
   <difference>
-    <differenceType>7002</differenceType>
+    <differenceType>7005</differenceType>
     <className>com/google/cloud/devtools/containeranalysis/v1/ContainerAnalysisClient</className>
-    <method>* getIamPolicy(*)</method>
-  </difference>
-  <difference>
-    <differenceType>7002</differenceType>
-    <className>com/google/cloud/devtools/containeranalysis/v1/ContainerAnalysisClient</className>
-    <method>* setIamPolicy(*)</method>
-  </difference>
-  <difference>
-    <differenceType>7002</differenceType>
-    <className>com/google/cloud/devtools/containeranalysis/v1/ContainerAnalysisClient</className>
-    <method>* testIamPermissions(*)</method>
+    <method>* *Iam*(*)</method>
+    <to>* *Iam*(*ResourceName*)</to>
   </difference>
 </differences>

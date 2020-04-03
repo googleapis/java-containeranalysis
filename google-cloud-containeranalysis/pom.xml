@@ -41,7 +41,10 @@
       <groupId>com.google.api.grpc</groupId>
       <artifactId>proto-google-common-protos</artifactId>
     </dependency>
-
+    <dependency>  
+      <groupId>com.google.api.grpc</groupId>  
+      <artifactId>proto-google-cloud-containeranalysis-v1</artifactId>  
+    </dependency>
     <dependency>
       <groupId>com.google.api.grpc</groupId>
       <artifactId>proto-google-cloud-containeranalysis-v1beta1</artifactId>
@@ -103,6 +106,12 @@
       <activation>
         <jdk>[9,)</jdk>
       </activation>
+      <dependencies>  
+        <dependency>  
+          <groupId>javax.annotation</groupId> 
+          <artifactId>javax.annotation-api</artifactId> 
+        </dependency> 
+      </dependencies>
     </profile>
   </profiles>
 </project>
