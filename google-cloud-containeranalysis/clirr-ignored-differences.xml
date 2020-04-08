@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- see http://www.mojohaus.org/clirr-maven-plugin/examples/ignored-differences.html -->
+<differences>
+  <!-- TODO: remove after 0.120.0 -->
+  <difference>
+    <differenceType>7002</differenceType>
+    <className>com/google/cloud/devtools/containeranalysis/v1/ContainerAnalysisClient</className>
+    <method>com.google.iam.v1.Policy *IamPolicy(*)</method>
+  </difference>
+  <difference>
+    <differenceType>7002</differenceType>
+    <className>com/google/cloud/devtools/containeranalysis/v1/ContainerAnalysisClient</className>
+    <method>com.google.iam.v1.TestIamPermissionsResponse testIamPermissions(*)</method>
+  </difference>
+</differences>
