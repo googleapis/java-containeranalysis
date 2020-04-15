@@ -38,8 +38,9 @@
  * <pre>
  * <code>
  * try (ContainerAnalysisClient containerAnalysisClient = ContainerAnalysisClient.create()) {
- *   SetIamPolicyRequest request = SetIamPolicyRequest.newBuilder().build();
- *   Policy response = containerAnalysisClient.setIamPolicy(request);
+ *   String resource = "";
+ *   Policy policy = Policy.newBuilder().build();
+ *   Policy response = containerAnalysisClient.setIamPolicy(resource, policy);
  * }
  * </code>
  * </pre>
