@@ -32,8 +32,10 @@ import com.google.protobuf.ByteString;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import java.util.UUID;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -91,13 +93,15 @@ public class ContainerAnalysisClientTest {
     String resource = "resource-341064690";
     Policy policy = Policy.newBuilder().build();
 
-    Policy actualResponse = client.setIamPolicy(request);
+    Policy actualResponse = client.setIamPolicy(resource, policy);
     Assert.assertEquals(expectedResponse, actualResponse);
 
     List<AbstractMessage> actualRequests = mockContainerAnalysis.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     SetIamPolicyRequest actualRequest = (SetIamPolicyRequest) actualRequests.get(0);
 
+    Assert.assertEquals(Objects.toString(resource), Objects.toString(actualRequest.getResource()));
+    Assert.assertEquals(policy, actualRequest.getPolicy());
     Assert.assertTrue(
         channelProvider.isHeaderSent(
             ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
@@ -114,7 +118,7 @@ public class ContainerAnalysisClientTest {
       String resource = "resource-341064690";
       Policy policy = Policy.newBuilder().build();
 
-      client.setIamPolicy(request);
+      client.setIamPolicy(resource, policy);
       Assert.fail("No exception raised");
     } catch (InvalidArgumentException e) {
       // Expected exception
@@ -131,13 +135,14 @@ public class ContainerAnalysisClientTest {
 
     String resource = "resource-341064690";
 
-    Policy actualResponse = client.getIamPolicy(request);
+    Policy actualResponse = client.getIamPolicy(resource);
     Assert.assertEquals(expectedResponse, actualResponse);
 
     List<AbstractMessage> actualRequests = mockContainerAnalysis.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetIamPolicyRequest actualRequest = (GetIamPolicyRequest) actualRequests.get(0);
 
+    Assert.assertEquals(Objects.toString(resource), Objects.toString(actualRequest.getResource()));
     Assert.assertTrue(
         channelProvider.isHeaderSent(
             ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
@@ -153,7 +158,7 @@ public class ContainerAnalysisClientTest {
     try {
       String resource = "resource-341064690";
 
-      client.getIamPolicy(request);
+      client.getIamPolicy(resource);
       Assert.fail("No exception raised");
     } catch (InvalidArgumentException e) {
       // Expected exception
@@ -169,13 +174,15 @@ public class ContainerAnalysisClientTest {
     String resource = "resource-341064690";
     List<String> permissions = new ArrayList<>();
 
-    TestIamPermissionsResponse actualResponse = client.testIamPermissions(request);
+    TestIamPermissionsResponse actualResponse = client.testIamPermissions(resource, permissions);
     Assert.assertEquals(expectedResponse, actualResponse);
 
     List<AbstractMessage> actualRequests = mockContainerAnalysis.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     TestIamPermissionsRequest actualRequest = (TestIamPermissionsRequest) actualRequests.get(0);
 
+    Assert.assertEquals(Objects.toString(resource), Objects.toString(actualRequest.getResource()));
+    Assert.assertEquals(permissions, actualRequest.getPermissionsList());
     Assert.assertTrue(
         channelProvider.isHeaderSent(
             ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
@@ -192,7 +199,7 @@ public class ContainerAnalysisClientTest {
       String resource = "resource-341064690";
       List<String> permissions = new ArrayList<>();
 
-      client.testIamPermissions(request);
+      client.testIamPermissions(resource, permissions);
       Assert.fail("No exception raised");
     } catch (InvalidArgumentException e) {
       // Expected exception
