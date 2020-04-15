@@ -22,8 +22,6 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.containeranalysis.v1.IamResourceName;
-import com.google.containeranalysis.v1.NoteName;
 import com.google.iam.v1.GetIamPolicyRequest;
 import com.google.iam.v1.Policy;
 import com.google.iam.v1.SetIamPolicyRequest;
@@ -34,10 +32,8 @@ import com.google.protobuf.ByteString;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 import java.util.UUID;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -92,18 +88,15 @@ public class ContainerAnalysisClientTest {
     Policy expectedResponse = Policy.newBuilder().setVersion(version).setEtag(etag).build();
     mockContainerAnalysis.addResponse(expectedResponse);
 
-    IamResourceName resource = NoteName.of("[PROJECT]", "[NOTE]");
-    Policy policy = Policy.newBuilder().build();
+    SetIamPolicyRequest request = SetIamPolicyRequest.newBuilder().build();
 
-    Policy actualResponse = client.setIamPolicy(resource, policy);
+    Policy actualResponse = client.setIamPolicy(request);
     Assert.assertEquals(expectedResponse, actualResponse);
 
     List<AbstractMessage> actualRequests = mockContainerAnalysis.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     SetIamPolicyRequest actualRequest = (SetIamPolicyRequest) actualRequests.get(0);
 
-    Assert.assertEquals(Objects.toString(resource), Objects.toString(actualRequest.getResource()));
-    Assert.assertEquals(policy, actualRequest.getPolicy());
     Assert.assertTrue(
         channelProvider.isHeaderSent(
             ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
@@ -117,10 +110,9 @@ public class ContainerAnalysisClientTest {
     mockContainerAnalysis.addException(exception);
 
     try {
-      IamResourceName resource = NoteName.of("[PROJECT]", "[NOTE]");
-      Policy policy = Policy.newBuilder().build();
+      SetIamPolicyRequest request = SetIamPolicyRequest.newBuilder().build();
 
-      client.setIamPolicy(resource, policy);
+      client.setIamPolicy(request);
       Assert.fail("No exception raised");
     } catch (InvalidArgumentException e) {
       // Expected exception
@@ -135,16 +127,15 @@ public class ContainerAnalysisClientTest {
     Policy expectedResponse = Policy.newBuilder().setVersion(version).setEtag(etag).build();
     mockContainerAnalysis.addResponse(expectedResponse);
 
-    IamResourceName resource = NoteName.of("[PROJECT]", "[NOTE]");
+    GetIamPolicyRequest request = GetIamPolicyRequest.newBuilder().build();
 
-    Policy actualResponse = client.getIamPolicy(resource);
+    Policy actualResponse = client.getIamPolicy(request);
     Assert.assertEquals(expectedResponse, actualResponse);
 
     List<AbstractMessage> actualRequests = mockContainerAnalysis.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetIamPolicyRequest actualRequest = (GetIamPolicyRequest) actualRequests.get(0);
 
-    Assert.assertEquals(Objects.toString(resource), Objects.toString(actualRequest.getResource()));
     Assert.assertTrue(
         channelProvider.isHeaderSent(
             ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
@@ -158,9 +149,9 @@ public class ContainerAnalysisClientTest {
     mockContainerAnalysis.addException(exception);
 
     try {
-      IamResourceName resource = NoteName.of("[PROJECT]", "[NOTE]");
+      GetIamPolicyRequest request = GetIamPolicyRequest.newBuilder().build();
 
-      client.getIamPolicy(resource);
+      client.getIamPolicy(request);
       Assert.fail("No exception raised");
     } catch (InvalidArgumentException e) {
       // Expected exception
@@ -173,18 +164,15 @@ public class ContainerAnalysisClientTest {
     TestIamPermissionsResponse expectedResponse = TestIamPermissionsResponse.newBuilder().build();
     mockContainerAnalysis.addResponse(expectedResponse);
 
-    IamResourceName resource = NoteName.of("[PROJECT]", "[NOTE]");
-    List<String> permissions = new ArrayList<>();
+    TestIamPermissionsRequest request = TestIamPermissionsRequest.newBuilder().build();
 
-    TestIamPermissionsResponse actualResponse = client.testIamPermissions(resource, permissions);
+    TestIamPermissionsResponse actualResponse = client.testIamPermissions(request);
     Assert.assertEquals(expectedResponse, actualResponse);
 
     List<AbstractMessage> actualRequests = mockContainerAnalysis.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     TestIamPermissionsRequest actualRequest = (TestIamPermissionsRequest) actualRequests.get(0);
 
-    Assert.assertEquals(Objects.toString(resource), Objects.toString(actualRequest.getResource()));
-    Assert.assertEquals(permissions, actualRequest.getPermissionsList());
     Assert.assertTrue(
         channelProvider.isHeaderSent(
             ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
@@ -198,10 +186,9 @@ public class ContainerAnalysisClientTest {
     mockContainerAnalysis.addException(exception);
 
     try {
-      IamResourceName resource = NoteName.of("[PROJECT]", "[NOTE]");
-      List<String> permissions = new ArrayList<>();
+      TestIamPermissionsRequest request = TestIamPermissionsRequest.newBuilder().build();
 
-      client.testIamPermissions(resource, permissions);
+      client.testIamPermissions(request);
       Assert.fail("No exception raised");
     } catch (InvalidArgumentException e) {
       // Expected exception
