@@ -88,7 +88,8 @@ public class ContainerAnalysisClientTest {
     Policy expectedResponse = Policy.newBuilder().setVersion(version).setEtag(etag).build();
     mockContainerAnalysis.addResponse(expectedResponse);
 
-    SetIamPolicyRequest request = SetIamPolicyRequest.newBuilder().build();
+    String resource = "resource-341064690";
+    Policy policy = Policy.newBuilder().build();
 
     Policy actualResponse = client.setIamPolicy(request);
     Assert.assertEquals(expectedResponse, actualResponse);
@@ -110,7 +111,8 @@ public class ContainerAnalysisClientTest {
     mockContainerAnalysis.addException(exception);
 
     try {
-      SetIamPolicyRequest request = SetIamPolicyRequest.newBuilder().build();
+      String resource = "resource-341064690";
+      Policy policy = Policy.newBuilder().build();
 
       client.setIamPolicy(request);
       Assert.fail("No exception raised");
@@ -127,7 +129,7 @@ public class ContainerAnalysisClientTest {
     Policy expectedResponse = Policy.newBuilder().setVersion(version).setEtag(etag).build();
     mockContainerAnalysis.addResponse(expectedResponse);
 
-    GetIamPolicyRequest request = GetIamPolicyRequest.newBuilder().build();
+    String resource = "resource-341064690";
 
     Policy actualResponse = client.getIamPolicy(request);
     Assert.assertEquals(expectedResponse, actualResponse);
@@ -149,7 +151,7 @@ public class ContainerAnalysisClientTest {
     mockContainerAnalysis.addException(exception);
 
     try {
-      GetIamPolicyRequest request = GetIamPolicyRequest.newBuilder().build();
+      String resource = "resource-341064690";
 
       client.getIamPolicy(request);
       Assert.fail("No exception raised");
@@ -164,7 +166,8 @@ public class ContainerAnalysisClientTest {
     TestIamPermissionsResponse expectedResponse = TestIamPermissionsResponse.newBuilder().build();
     mockContainerAnalysis.addResponse(expectedResponse);
 
-    TestIamPermissionsRequest request = TestIamPermissionsRequest.newBuilder().build();
+    String resource = "resource-341064690";
+    List<String> permissions = new ArrayList<>();
 
     TestIamPermissionsResponse actualResponse = client.testIamPermissions(request);
     Assert.assertEquals(expectedResponse, actualResponse);
@@ -186,7 +189,8 @@ public class ContainerAnalysisClientTest {
     mockContainerAnalysis.addException(exception);
 
     try {
-      TestIamPermissionsRequest request = TestIamPermissionsRequest.newBuilder().build();
+      String resource = "resource-341064690";
+      List<String> permissions = new ArrayList<>();
 
       client.testIamPermissions(request);
       Assert.fail("No exception raised");
