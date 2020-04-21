@@ -3,8 +3,8 @@
     {
       "git": {
         "name": ".",
-        "remote": "git@github.com:googleapis/java-containeranalysis.git",
-        "sha": "e1cb830688e4c1efd3f1be1cbae49cd8a5a326ee"
+        "remote": "https://github.com/googleapis/java-containeranalysis.git",
+        "sha": "9b112d55723c49dab1121192e24efd1fa53201fd"
       }
     },
     {
