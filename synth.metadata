@@ -4,7 +4,7 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/java-containeranalysis.git",
-        "sha": "af18f8a6344b1740089775cbb9a2fcf4afd1dd07"
+        "sha": "47a2bb66e89cf79df3746c8227e5546fdced09b6"
       }
     },
     {
@@ -27,7 +27,7 @@
       "git": {
         "name": "synthtool",
         "remote": "https://github.com/googleapis/synthtool.git",
-        "sha": "916c10e8581804df2b48a0f0457d848f3faa582e"
+        "sha": "95dbe1bee3c7f7e52ddb24a54c37080620e0d1a2"
       }
     }
   ],
@@ -109,7 +109,6 @@
     "CODE_OF_CONDUCT.md",
     "CONTRIBUTING.md",
     "LICENSE",
-    "README.md",
     "codecov.yaml",
     "google-cloud-containeranalysis/src/main/java/com/google/cloud/devtools/containeranalysis/v1/ContainerAnalysisClient.java",
     "google-cloud-containeranalysis/src/main/java/com/google/cloud/devtools/containeranalysis/v1/ContainerAnalysisSettings.java",
