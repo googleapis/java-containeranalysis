@@ -4,23 +4,23 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/java-containeranalysis.git",
-        "sha": "47a2bb66e89cf79df3746c8227e5546fdced09b6"
+        "sha": "7905d93cddc053becb6fa3b203d2866062480fdb"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "96ef637adf148d54236ad83fefa30c7f75f29737",
-        "internalRef": "325052820"
+        "sha": "cb7fc620590382a4a2ea6ffdf6f51ae0e77bbbb5",
+        "internalRef": "334682521"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "96ef637adf148d54236ad83fefa30c7f75f29737",
-        "internalRef": "325052820"
+        "sha": "cb7fc620590382a4a2ea6ffdf6f51ae0e77bbbb5",
+        "internalRef": "334682521"
       }
     },
     {
@@ -148,6 +148,11 @@
     "java.header",
     "license-checks.xml",
     "proto-google-cloud-containeranalysis-v1/src/main/java/com/google/containeranalysis/v1/Containeranalysis.java",
+    "proto-google-cloud-containeranalysis-v1/src/main/java/com/google/containeranalysis/v1/GetVulnerabilityOccurrencesSummaryRequest.java",
+    "proto-google-cloud-containeranalysis-v1/src/main/java/com/google/containeranalysis/v1/GetVulnerabilityOccurrencesSummaryRequestOrBuilder.java",
+    "proto-google-cloud-containeranalysis-v1/src/main/java/com/google/containeranalysis/v1/ProjectName.java",
+    "proto-google-cloud-containeranalysis-v1/src/main/java/com/google/containeranalysis/v1/VulnerabilityOccurrencesSummary.java",
+    "proto-google-cloud-containeranalysis-v1/src/main/java/com/google/containeranalysis/v1/VulnerabilityOccurrencesSummaryOrBuilder.java",
     "proto-google-cloud-containeranalysis-v1/src/main/proto/google/devtools/containeranalysis/v1/containeranalysis.proto",
     "proto-google-cloud-containeranalysis-v1beta1/src/main/java/com/google/containeranalysis/v1beta1/Containeranalysis.java",
     "proto-google-cloud-containeranalysis-v1beta1/src/main/java/com/google/containeranalysis/v1beta1/GetScanConfigRequest.java",
