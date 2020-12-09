@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.cloud.devtools.containeranalysis.v1beta1.stub;
 
 import static com.google.cloud.devtools.containeranalysis.v1beta1.ContainerAnalysisV1Beta1Client.ListScanConfigsPagedResponse;
@@ -55,10 +56,11 @@ import com.google.iam.v1.TestIamPermissionsRequest;
 import com.google.iam.v1.TestIamPermissionsResponse;
 import java.io.IOException;
 import java.util.List;
+import java.util.Objects;
 import javax.annotation.Generated;
 import org.threeten.bp.Duration;
 
-// AUTO-GENERATED DOCUMENTATION AND CLASS
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Settings class to configure an instance of {@link ContainerAnalysisV1Beta1Stub}.
  *
@@ -76,22 +78,24 @@ import org.threeten.bp.Duration;
  *
  * <p>For example, to set the total timeout of setIamPolicy to 30 seconds:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * ContainerAnalysisV1Beta1StubSettings.Builder containerAnalysisV1Beta1SettingsBuilder =
  *     ContainerAnalysisV1Beta1StubSettings.newBuilder();
  * containerAnalysisV1Beta1SettingsBuilder
  *     .setIamPolicySettings()
  *     .setRetrySettings(
- *         containerAnalysisV1Beta1SettingsBuilder.setIamPolicySettings().getRetrySettings().toBuilder()
+ *         containerAnalysisV1Beta1SettingsBuilder
+ *             .setIamPolicySettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
- * ContainerAnalysisV1Beta1StubSettings containerAnalysisV1Beta1Settings = containerAnalysisV1Beta1SettingsBuilder.build();
- * </code>
- * </pre>
+ * ContainerAnalysisV1Beta1StubSettings containerAnalysisV1Beta1Settings =
+ *     containerAnalysisV1Beta1SettingsBuilder.build();
+ * }</pre>
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator-java")
 public class ContainerAnalysisV1Beta1StubSettings
     extends StubSettings<ContainerAnalysisV1Beta1StubSettings> {
   /** The default scopes of the service. */
@@ -107,6 +111,62 @@ public class ContainerAnalysisV1Beta1StubSettings
           ListScanConfigsRequest, ListScanConfigsResponse, ListScanConfigsPagedResponse>
       listScanConfigsSettings;
   private final UnaryCallSettings<UpdateScanConfigRequest, ScanConfig> updateScanConfigSettings;
+
+  private static final PagedListDescriptor<
+          ListScanConfigsRequest, ListScanConfigsResponse, ScanConfig>
+      LIST_SCAN_CONFIGS_PAGE_STR_DESC =
+          new PagedListDescriptor<ListScanConfigsRequest, ListScanConfigsResponse, ScanConfig>() {
+            @Override
+            public String emptyToken() {
+              return "";
+            }
+
+            @Override
+            public ListScanConfigsRequest injectToken(
+                ListScanConfigsRequest payload, String token) {
+              return ListScanConfigsRequest.newBuilder(payload).setPageToken(token).build();
+            }
+
+            @Override
+            public ListScanConfigsRequest injectPageSize(
+                ListScanConfigsRequest payload, int pageSize) {
+              return ListScanConfigsRequest.newBuilder(payload).setPageSize(pageSize).build();
+            }
+
+            @Override
+            public Integer extractPageSize(ListScanConfigsRequest payload) {
+              return payload.getPageSize();
+            }
+
+            @Override
+            public String extractNextToken(ListScanConfigsResponse payload) {
+              return payload.getNextPageToken();
+            }
+
+            @Override
+            public Iterable<ScanConfig> extractResources(ListScanConfigsResponse payload) {
+              return Objects.isNull(payload.getScanConfigsList())
+                  ? ImmutableList.<ScanConfig>of()
+                  : payload.getScanConfigsList();
+            }
+          };
+
+  private static final PagedListResponseFactory<
+          ListScanConfigsRequest, ListScanConfigsResponse, ListScanConfigsPagedResponse>
+      LIST_SCAN_CONFIGS_PAGE_STR_FACT =
+          new PagedListResponseFactory<
+              ListScanConfigsRequest, ListScanConfigsResponse, ListScanConfigsPagedResponse>() {
+            @Override
+            public ApiFuture<ListScanConfigsPagedResponse> getFuturePagedResponse(
+                UnaryCallable<ListScanConfigsRequest, ListScanConfigsResponse> callable,
+                ListScanConfigsRequest request,
+                ApiCallContext context,
+                ApiFuture<ListScanConfigsResponse> futureResponse) {
+              PageContext<ListScanConfigsRequest, ListScanConfigsResponse, ScanConfig> pageContext =
+                  PageContext.create(callable, LIST_SCAN_CONFIGS_PAGE_STR_DESC, request, context);
+              return ListScanConfigsPagedResponse.createAsync(pageContext, futureResponse);
+            }
+          };
 
   /** Returns the object with the settings used for calls to setIamPolicy. */
   public UnaryCallSettings<SetIamPolicyRequest, Policy> setIamPolicySettings() {
@@ -147,10 +207,10 @@ public class ContainerAnalysisV1Beta1StubSettings
         .getTransportName()
         .equals(GrpcTransportChannel.getGrpcTransportName())) {
       return GrpcContainerAnalysisV1Beta1Stub.create(this);
-    } else {
-      throw new UnsupportedOperationException(
-          "Transport not supported: " + getTransportChannelProvider().getTransportName());
     }
+    throw new UnsupportedOperationException(
+        String.format(
+            "Transport not supported: %s", getTransportChannelProvider().getTransportName()));
   }
 
   /** Returns a builder for the default ExecutorProvider for this service. */
@@ -218,67 +278,10 @@ public class ContainerAnalysisV1Beta1StubSettings
     updateScanConfigSettings = settingsBuilder.updateScanConfigSettings().build();
   }
 
-  private static final PagedListDescriptor<
-          ListScanConfigsRequest, ListScanConfigsResponse, ScanConfig>
-      LIST_SCAN_CONFIGS_PAGE_STR_DESC =
-          new PagedListDescriptor<ListScanConfigsRequest, ListScanConfigsResponse, ScanConfig>() {
-            @Override
-            public String emptyToken() {
-              return "";
-            }
-
-            @Override
-            public ListScanConfigsRequest injectToken(
-                ListScanConfigsRequest payload, String token) {
-              return ListScanConfigsRequest.newBuilder(payload).setPageToken(token).build();
-            }
-
-            @Override
-            public ListScanConfigsRequest injectPageSize(
-                ListScanConfigsRequest payload, int pageSize) {
-              return ListScanConfigsRequest.newBuilder(payload).setPageSize(pageSize).build();
-            }
-
-            @Override
-            public Integer extractPageSize(ListScanConfigsRequest payload) {
-              return payload.getPageSize();
-            }
-
-            @Override
-            public String extractNextToken(ListScanConfigsResponse payload) {
-              return payload.getNextPageToken();
-            }
-
-            @Override
-            public Iterable<ScanConfig> extractResources(ListScanConfigsResponse payload) {
-              return payload.getScanConfigsList() != null
-                  ? payload.getScanConfigsList()
-                  : ImmutableList.<ScanConfig>of();
-            }
-          };
-
-  private static final PagedListResponseFactory<
-          ListScanConfigsRequest, ListScanConfigsResponse, ListScanConfigsPagedResponse>
-      LIST_SCAN_CONFIGS_PAGE_STR_FACT =
-          new PagedListResponseFactory<
-              ListScanConfigsRequest, ListScanConfigsResponse, ListScanConfigsPagedResponse>() {
-            @Override
-            public ApiFuture<ListScanConfigsPagedResponse> getFuturePagedResponse(
-                UnaryCallable<ListScanConfigsRequest, ListScanConfigsResponse> callable,
-                ListScanConfigsRequest request,
-                ApiCallContext context,
-                ApiFuture<ListScanConfigsResponse> futureResponse) {
-              PageContext<ListScanConfigsRequest, ListScanConfigsResponse, ScanConfig> pageContext =
-                  PageContext.create(callable, LIST_SCAN_CONFIGS_PAGE_STR_DESC, request, context);
-              return ListScanConfigsPagedResponse.createAsync(pageContext, futureResponse);
-            }
-          };
-
   /** Builder for ContainerAnalysisV1Beta1StubSettings. */
   public static class Builder
       extends StubSettings.Builder<ContainerAnalysisV1Beta1StubSettings, Builder> {
     private final ImmutableList<UnaryCallSettings.Builder<?, ?>> unaryMethodSettingsBuilders;
-
     private final UnaryCallSettings.Builder<SetIamPolicyRequest, Policy> setIamPolicySettings;
     private final UnaryCallSettings.Builder<GetIamPolicyRequest, Policy> getIamPolicySettings;
     private final UnaryCallSettings.Builder<TestIamPermissionsRequest, TestIamPermissionsResponse>
@@ -289,7 +292,6 @@ public class ContainerAnalysisV1Beta1StubSettings
         listScanConfigsSettings;
     private final UnaryCallSettings.Builder<UpdateScanConfigRequest, ScanConfig>
         updateScanConfigSettings;
-
     private static final ImmutableMap<String, ImmutableSet<StatusCode.Code>>
         RETRYABLE_CODE_DEFINITIONS;
 
@@ -297,11 +299,12 @@ public class ContainerAnalysisV1Beta1StubSettings
       ImmutableMap.Builder<String, ImmutableSet<StatusCode.Code>> definitions =
           ImmutableMap.builder();
       definitions.put(
-          "idempotent",
+          "no_retry_0_codes", ImmutableSet.copyOf(Lists.<StatusCode.Code>newArrayList()));
+      definitions.put(
+          "retry_policy_1_codes",
           ImmutableSet.copyOf(
               Lists.<StatusCode.Code>newArrayList(
-                  StatusCode.Code.DEADLINE_EXCEEDED, StatusCode.Code.UNAVAILABLE)));
-      definitions.put("non_idempotent", ImmutableSet.copyOf(Lists.<StatusCode.Code>newArrayList()));
+                  StatusCode.Code.UNAVAILABLE, StatusCode.Code.DEADLINE_EXCEEDED)));
       RETRYABLE_CODE_DEFINITIONS = definitions.build();
     }
 
@@ -312,35 +315,38 @@ public class ContainerAnalysisV1Beta1StubSettings
       RetrySettings settings = null;
       settings =
           RetrySettings.newBuilder()
+              .setInitialRpcTimeout(Duration.ofMillis(30000L))
+              .setRpcTimeoutMultiplier(1.0)
+              .setMaxRpcTimeout(Duration.ofMillis(30000L))
+              .setTotalTimeout(Duration.ofMillis(30000L))
+              .build();
+      definitions.put("no_retry_0_params", settings);
+      settings =
+          RetrySettings.newBuilder()
               .setInitialRetryDelay(Duration.ofMillis(100L))
               .setRetryDelayMultiplier(1.3)
               .setMaxRetryDelay(Duration.ofMillis(60000L))
-              .setInitialRpcTimeout(Duration.ofMillis(20000L))
+              .setInitialRpcTimeout(Duration.ofMillis(30000L))
               .setRpcTimeoutMultiplier(1.0)
-              .setMaxRpcTimeout(Duration.ofMillis(20000L))
-              .setTotalTimeout(Duration.ofMillis(600000L))
+              .setMaxRpcTimeout(Duration.ofMillis(30000L))
+              .setTotalTimeout(Duration.ofMillis(30000L))
               .build();
-      definitions.put("default", settings);
+      definitions.put("retry_policy_1_params", settings);
       RETRY_PARAM_DEFINITIONS = definitions.build();
     }
 
     protected Builder() {
-      this((ClientContext) null);
+      this(((ClientContext) null));
     }
 
     protected Builder(ClientContext clientContext) {
       super(clientContext);
 
       setIamPolicySettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
-
       getIamPolicySettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
-
       testIamPermissionsSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
-
       getScanConfigSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
-
       listScanConfigsSettings = PagedCallSettings.newBuilder(LIST_SCAN_CONFIGS_PAGE_STR_FACT);
-
       updateScanConfigSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
 
       unaryMethodSettingsBuilders =
@@ -351,52 +357,7 @@ public class ContainerAnalysisV1Beta1StubSettings
               getScanConfigSettings,
               listScanConfigsSettings,
               updateScanConfigSettings);
-
       initDefaults(this);
-    }
-
-    private static Builder createDefault() {
-      Builder builder = new Builder((ClientContext) null);
-      builder.setTransportChannelProvider(defaultTransportChannelProvider());
-      builder.setCredentialsProvider(defaultCredentialsProviderBuilder().build());
-      builder.setInternalHeaderProvider(defaultApiClientHeaderProviderBuilder().build());
-      builder.setEndpoint(getDefaultEndpoint());
-      return initDefaults(builder);
-    }
-
-    private static Builder initDefaults(Builder builder) {
-
-      builder
-          .setIamPolicySettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("non_idempotent"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
-
-      builder
-          .getIamPolicySettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("non_idempotent"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
-
-      builder
-          .testIamPermissionsSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("non_idempotent"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
-
-      builder
-          .getScanConfigSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("idempotent"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
-
-      builder
-          .listScanConfigsSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("idempotent"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
-
-      builder
-          .updateScanConfigSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("non_idempotent"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
-
-      return builder;
     }
 
     protected Builder(ContainerAnalysisV1Beta1StubSettings settings) {
@@ -419,7 +380,52 @@ public class ContainerAnalysisV1Beta1StubSettings
               updateScanConfigSettings);
     }
 
-    // NEXT_MAJOR_VER: remove 'throws Exception'
+    private static Builder createDefault() {
+      Builder builder = new Builder(((ClientContext) null));
+
+      builder.setTransportChannelProvider(defaultTransportChannelProvider());
+      builder.setCredentialsProvider(defaultCredentialsProviderBuilder().build());
+      builder.setInternalHeaderProvider(defaultApiClientHeaderProviderBuilder().build());
+      builder.setEndpoint(getDefaultEndpoint());
+
+      return initDefaults(builder);
+    }
+
+    private static Builder initDefaults(Builder builder) {
+      builder
+          .setIamPolicySettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("no_retry_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("no_retry_0_params"));
+
+      builder
+          .getIamPolicySettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("no_retry_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("no_retry_0_params"));
+
+      builder
+          .testIamPermissionsSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("no_retry_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("no_retry_0_params"));
+
+      builder
+          .getScanConfigSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_1_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_1_params"));
+
+      builder
+          .listScanConfigsSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_1_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_1_params"));
+
+      builder
+          .updateScanConfigSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("no_retry_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("no_retry_0_params"));
+
+      return builder;
+    }
+
+    // NEXT_MAJOR_VER: remove 'throws Exception'.
     /**
      * Applies the given settings updater function to all of the unary API methods in this service.
      *
