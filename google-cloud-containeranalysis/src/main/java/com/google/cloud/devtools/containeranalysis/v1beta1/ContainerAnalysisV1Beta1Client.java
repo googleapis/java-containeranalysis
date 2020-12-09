@@ -44,7 +44,6 @@ import com.google.iam.v1.TestIamPermissionsResponse;
 import io.grafeas.v1beta1.vulnerability.ProjectName;
 import java.io.IOException;
 import java.util.List;
-import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
@@ -189,7 +188,7 @@ public class ContainerAnalysisV1Beta1Client implements BackgroundResource {
   public final Policy setIamPolicy(ResourceName resource, Policy policy) {
     SetIamPolicyRequest request =
         SetIamPolicyRequest.newBuilder()
-            .setResource(Objects.isNull(resource) ? null : resource.toString())
+            .setResource(resource == null ? null : resource.toString())
             .setPolicy(policy)
             .build();
     return setIamPolicy(request);
@@ -264,7 +263,7 @@ public class ContainerAnalysisV1Beta1Client implements BackgroundResource {
   public final Policy getIamPolicy(ResourceName resource) {
     GetIamPolicyRequest request =
         GetIamPolicyRequest.newBuilder()
-            .setResource(Objects.isNull(resource) ? null : resource.toString())
+            .setResource(resource == null ? null : resource.toString())
             .build();
     return getIamPolicy(request);
   }
@@ -337,7 +336,7 @@ public class ContainerAnalysisV1Beta1Client implements BackgroundResource {
       ResourceName resource, List<String> permissions) {
     TestIamPermissionsRequest request =
         TestIamPermissionsRequest.newBuilder()
-            .setResource(Objects.isNull(resource) ? null : resource.toString())
+            .setResource(resource == null ? null : resource.toString())
             .addAllPermissions(permissions)
             .build();
     return testIamPermissions(request);
@@ -408,9 +407,7 @@ public class ContainerAnalysisV1Beta1Client implements BackgroundResource {
    */
   public final ScanConfig getScanConfig(ScanConfigName name) {
     GetScanConfigRequest request =
-        GetScanConfigRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
-            .build();
+        GetScanConfigRequest.newBuilder().setName(name == null ? null : name.toString()).build();
     return getScanConfig(request);
   }
 
@@ -460,7 +457,7 @@ public class ContainerAnalysisV1Beta1Client implements BackgroundResource {
   public final ListScanConfigsPagedResponse listScanConfigs(ProjectName parent, String filter) {
     ListScanConfigsRequest request =
         ListScanConfigsRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setFilter(filter)
             .build();
     return listScanConfigs(request);
@@ -526,7 +523,7 @@ public class ContainerAnalysisV1Beta1Client implements BackgroundResource {
   public final ScanConfig updateScanConfig(ScanConfigName name, ScanConfig scanConfig) {
     UpdateScanConfigRequest request =
         UpdateScanConfigRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .setScanConfig(scanConfig)
             .build();
     return updateScanConfig(request);

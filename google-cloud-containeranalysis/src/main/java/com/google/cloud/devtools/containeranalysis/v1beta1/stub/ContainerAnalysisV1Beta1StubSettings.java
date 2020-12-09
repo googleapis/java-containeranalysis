@@ -56,7 +56,6 @@ import com.google.iam.v1.TestIamPermissionsRequest;
 import com.google.iam.v1.TestIamPermissionsResponse;
 import java.io.IOException;
 import java.util.List;
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.threeten.bp.Duration;
 
@@ -145,7 +144,7 @@ public class ContainerAnalysisV1Beta1StubSettings
 
             @Override
             public Iterable<ScanConfig> extractResources(ListScanConfigsResponse payload) {
-              return Objects.isNull(payload.getScanConfigsList())
+              return payload.getScanConfigsList() == null
                   ? ImmutableList.<ScanConfig>of()
                   : payload.getScanConfigsList();
             }
