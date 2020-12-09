@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.cloud.devtools.containeranalysis.v1beta1.stub;
 
 import static com.google.cloud.devtools.containeranalysis.v1beta1.GrafeasV1Beta1Client.ListNoteOccurrencesPagedResponse;
@@ -71,10 +72,11 @@ import io.grafeas.v1beta1.UpdateOccurrenceRequest;
 import io.grafeas.v1beta1.VulnerabilityOccurrencesSummary;
 import java.io.IOException;
 import java.util.List;
+import java.util.Objects;
 import javax.annotation.Generated;
 import org.threeten.bp.Duration;
 
-// AUTO-GENERATED DOCUMENTATION AND CLASS
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Settings class to configure an instance of {@link GrafeasV1Beta1Stub}.
  *
@@ -92,22 +94,23 @@ import org.threeten.bp.Duration;
  *
  * <p>For example, to set the total timeout of getOccurrence to 30 seconds:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * GrafeasV1Beta1StubSettings.Builder grafeasV1Beta1SettingsBuilder =
  *     GrafeasV1Beta1StubSettings.newBuilder();
  * grafeasV1Beta1SettingsBuilder
  *     .getOccurrenceSettings()
  *     .setRetrySettings(
- *         grafeasV1Beta1SettingsBuilder.getOccurrenceSettings().getRetrySettings().toBuilder()
+ *         grafeasV1Beta1SettingsBuilder
+ *             .getOccurrenceSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
  * GrafeasV1Beta1StubSettings grafeasV1Beta1Settings = grafeasV1Beta1SettingsBuilder.build();
- * </code>
- * </pre>
+ * }</pre>
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator-java")
 public class GrafeasV1Beta1StubSettings extends StubSettings<GrafeasV1Beta1StubSettings> {
   /** The default scopes of the service. */
   private static final ImmutableList<String> DEFAULT_SERVICE_SCOPES =
@@ -137,6 +140,176 @@ public class GrafeasV1Beta1StubSettings extends StubSettings<GrafeasV1Beta1StubS
   private final UnaryCallSettings<
           GetVulnerabilityOccurrencesSummaryRequest, VulnerabilityOccurrencesSummary>
       getVulnerabilityOccurrencesSummarySettings;
+
+  private static final PagedListDescriptor<
+          ListOccurrencesRequest, ListOccurrencesResponse, Occurrence>
+      LIST_OCCURRENCES_PAGE_STR_DESC =
+          new PagedListDescriptor<ListOccurrencesRequest, ListOccurrencesResponse, Occurrence>() {
+            @Override
+            public String emptyToken() {
+              return "";
+            }
+
+            @Override
+            public ListOccurrencesRequest injectToken(
+                ListOccurrencesRequest payload, String token) {
+              return ListOccurrencesRequest.newBuilder(payload).setPageToken(token).build();
+            }
+
+            @Override
+            public ListOccurrencesRequest injectPageSize(
+                ListOccurrencesRequest payload, int pageSize) {
+              return ListOccurrencesRequest.newBuilder(payload).setPageSize(pageSize).build();
+            }
+
+            @Override
+            public Integer extractPageSize(ListOccurrencesRequest payload) {
+              return payload.getPageSize();
+            }
+
+            @Override
+            public String extractNextToken(ListOccurrencesResponse payload) {
+              return payload.getNextPageToken();
+            }
+
+            @Override
+            public Iterable<Occurrence> extractResources(ListOccurrencesResponse payload) {
+              return Objects.isNull(payload.getOccurrencesList())
+                  ? ImmutableList.<Occurrence>of()
+                  : payload.getOccurrencesList();
+            }
+          };
+
+  private static final PagedListDescriptor<ListNotesRequest, ListNotesResponse, Note>
+      LIST_NOTES_PAGE_STR_DESC =
+          new PagedListDescriptor<ListNotesRequest, ListNotesResponse, Note>() {
+            @Override
+            public String emptyToken() {
+              return "";
+            }
+
+            @Override
+            public ListNotesRequest injectToken(ListNotesRequest payload, String token) {
+              return ListNotesRequest.newBuilder(payload).setPageToken(token).build();
+            }
+
+            @Override
+            public ListNotesRequest injectPageSize(ListNotesRequest payload, int pageSize) {
+              return ListNotesRequest.newBuilder(payload).setPageSize(pageSize).build();
+            }
+
+            @Override
+            public Integer extractPageSize(ListNotesRequest payload) {
+              return payload.getPageSize();
+            }
+
+            @Override
+            public String extractNextToken(ListNotesResponse payload) {
+              return payload.getNextPageToken();
+            }
+
+            @Override
+            public Iterable<Note> extractResources(ListNotesResponse payload) {
+              return Objects.isNull(payload.getNotesList())
+                  ? ImmutableList.<Note>of()
+                  : payload.getNotesList();
+            }
+          };
+
+  private static final PagedListDescriptor<
+          ListNoteOccurrencesRequest, ListNoteOccurrencesResponse, Occurrence>
+      LIST_NOTE_OCCURRENCES_PAGE_STR_DESC =
+          new PagedListDescriptor<
+              ListNoteOccurrencesRequest, ListNoteOccurrencesResponse, Occurrence>() {
+            @Override
+            public String emptyToken() {
+              return "";
+            }
+
+            @Override
+            public ListNoteOccurrencesRequest injectToken(
+                ListNoteOccurrencesRequest payload, String token) {
+              return ListNoteOccurrencesRequest.newBuilder(payload).setPageToken(token).build();
+            }
+
+            @Override
+            public ListNoteOccurrencesRequest injectPageSize(
+                ListNoteOccurrencesRequest payload, int pageSize) {
+              return ListNoteOccurrencesRequest.newBuilder(payload).setPageSize(pageSize).build();
+            }
+
+            @Override
+            public Integer extractPageSize(ListNoteOccurrencesRequest payload) {
+              return payload.getPageSize();
+            }
+
+            @Override
+            public String extractNextToken(ListNoteOccurrencesResponse payload) {
+              return payload.getNextPageToken();
+            }
+
+            @Override
+            public Iterable<Occurrence> extractResources(ListNoteOccurrencesResponse payload) {
+              return Objects.isNull(payload.getOccurrencesList())
+                  ? ImmutableList.<Occurrence>of()
+                  : payload.getOccurrencesList();
+            }
+          };
+
+  private static final PagedListResponseFactory<
+          ListOccurrencesRequest, ListOccurrencesResponse, ListOccurrencesPagedResponse>
+      LIST_OCCURRENCES_PAGE_STR_FACT =
+          new PagedListResponseFactory<
+              ListOccurrencesRequest, ListOccurrencesResponse, ListOccurrencesPagedResponse>() {
+            @Override
+            public ApiFuture<ListOccurrencesPagedResponse> getFuturePagedResponse(
+                UnaryCallable<ListOccurrencesRequest, ListOccurrencesResponse> callable,
+                ListOccurrencesRequest request,
+                ApiCallContext context,
+                ApiFuture<ListOccurrencesResponse> futureResponse) {
+              PageContext<ListOccurrencesRequest, ListOccurrencesResponse, Occurrence> pageContext =
+                  PageContext.create(callable, LIST_OCCURRENCES_PAGE_STR_DESC, request, context);
+              return ListOccurrencesPagedResponse.createAsync(pageContext, futureResponse);
+            }
+          };
+
+  private static final PagedListResponseFactory<
+          ListNotesRequest, ListNotesResponse, ListNotesPagedResponse>
+      LIST_NOTES_PAGE_STR_FACT =
+          new PagedListResponseFactory<
+              ListNotesRequest, ListNotesResponse, ListNotesPagedResponse>() {
+            @Override
+            public ApiFuture<ListNotesPagedResponse> getFuturePagedResponse(
+                UnaryCallable<ListNotesRequest, ListNotesResponse> callable,
+                ListNotesRequest request,
+                ApiCallContext context,
+                ApiFuture<ListNotesResponse> futureResponse) {
+              PageContext<ListNotesRequest, ListNotesResponse, Note> pageContext =
+                  PageContext.create(callable, LIST_NOTES_PAGE_STR_DESC, request, context);
+              return ListNotesPagedResponse.createAsync(pageContext, futureResponse);
+            }
+          };
+
+  private static final PagedListResponseFactory<
+          ListNoteOccurrencesRequest, ListNoteOccurrencesResponse, ListNoteOccurrencesPagedResponse>
+      LIST_NOTE_OCCURRENCES_PAGE_STR_FACT =
+          new PagedListResponseFactory<
+              ListNoteOccurrencesRequest,
+              ListNoteOccurrencesResponse,
+              ListNoteOccurrencesPagedResponse>() {
+            @Override
+            public ApiFuture<ListNoteOccurrencesPagedResponse> getFuturePagedResponse(
+                UnaryCallable<ListNoteOccurrencesRequest, ListNoteOccurrencesResponse> callable,
+                ListNoteOccurrencesRequest request,
+                ApiCallContext context,
+                ApiFuture<ListNoteOccurrencesResponse> futureResponse) {
+              PageContext<ListNoteOccurrencesRequest, ListNoteOccurrencesResponse, Occurrence>
+                  pageContext =
+                      PageContext.create(
+                          callable, LIST_NOTE_OCCURRENCES_PAGE_STR_DESC, request, context);
+              return ListNoteOccurrencesPagedResponse.createAsync(pageContext, futureResponse);
+            }
+          };
 
   /** Returns the object with the settings used for calls to getOccurrence. */
   public UnaryCallSettings<GetOccurrenceRequest, Occurrence> getOccurrenceSettings() {
@@ -228,10 +401,10 @@ public class GrafeasV1Beta1StubSettings extends StubSettings<GrafeasV1Beta1StubS
         .getTransportName()
         .equals(GrpcTransportChannel.getGrpcTransportName())) {
       return GrpcGrafeasV1Beta1Stub.create(this);
-    } else {
-      throw new UnsupportedOperationException(
-          "Transport not supported: " + getTransportChannelProvider().getTransportName());
     }
+    throw new UnsupportedOperationException(
+        String.format(
+            "Transport not supported: %s", getTransportChannelProvider().getTransportName()));
   }
 
   /** Returns a builder for the default ExecutorProvider for this service. */
@@ -309,180 +482,9 @@ public class GrafeasV1Beta1StubSettings extends StubSettings<GrafeasV1Beta1StubS
         settingsBuilder.getVulnerabilityOccurrencesSummarySettings().build();
   }
 
-  private static final PagedListDescriptor<
-          ListOccurrencesRequest, ListOccurrencesResponse, Occurrence>
-      LIST_OCCURRENCES_PAGE_STR_DESC =
-          new PagedListDescriptor<ListOccurrencesRequest, ListOccurrencesResponse, Occurrence>() {
-            @Override
-            public String emptyToken() {
-              return "";
-            }
-
-            @Override
-            public ListOccurrencesRequest injectToken(
-                ListOccurrencesRequest payload, String token) {
-              return ListOccurrencesRequest.newBuilder(payload).setPageToken(token).build();
-            }
-
-            @Override
-            public ListOccurrencesRequest injectPageSize(
-                ListOccurrencesRequest payload, int pageSize) {
-              return ListOccurrencesRequest.newBuilder(payload).setPageSize(pageSize).build();
-            }
-
-            @Override
-            public Integer extractPageSize(ListOccurrencesRequest payload) {
-              return payload.getPageSize();
-            }
-
-            @Override
-            public String extractNextToken(ListOccurrencesResponse payload) {
-              return payload.getNextPageToken();
-            }
-
-            @Override
-            public Iterable<Occurrence> extractResources(ListOccurrencesResponse payload) {
-              return payload.getOccurrencesList() != null
-                  ? payload.getOccurrencesList()
-                  : ImmutableList.<Occurrence>of();
-            }
-          };
-
-  private static final PagedListDescriptor<ListNotesRequest, ListNotesResponse, Note>
-      LIST_NOTES_PAGE_STR_DESC =
-          new PagedListDescriptor<ListNotesRequest, ListNotesResponse, Note>() {
-            @Override
-            public String emptyToken() {
-              return "";
-            }
-
-            @Override
-            public ListNotesRequest injectToken(ListNotesRequest payload, String token) {
-              return ListNotesRequest.newBuilder(payload).setPageToken(token).build();
-            }
-
-            @Override
-            public ListNotesRequest injectPageSize(ListNotesRequest payload, int pageSize) {
-              return ListNotesRequest.newBuilder(payload).setPageSize(pageSize).build();
-            }
-
-            @Override
-            public Integer extractPageSize(ListNotesRequest payload) {
-              return payload.getPageSize();
-            }
-
-            @Override
-            public String extractNextToken(ListNotesResponse payload) {
-              return payload.getNextPageToken();
-            }
-
-            @Override
-            public Iterable<Note> extractResources(ListNotesResponse payload) {
-              return payload.getNotesList() != null
-                  ? payload.getNotesList()
-                  : ImmutableList.<Note>of();
-            }
-          };
-
-  private static final PagedListDescriptor<
-          ListNoteOccurrencesRequest, ListNoteOccurrencesResponse, Occurrence>
-      LIST_NOTE_OCCURRENCES_PAGE_STR_DESC =
-          new PagedListDescriptor<
-              ListNoteOccurrencesRequest, ListNoteOccurrencesResponse, Occurrence>() {
-            @Override
-            public String emptyToken() {
-              return "";
-            }
-
-            @Override
-            public ListNoteOccurrencesRequest injectToken(
-                ListNoteOccurrencesRequest payload, String token) {
-              return ListNoteOccurrencesRequest.newBuilder(payload).setPageToken(token).build();
-            }
-
-            @Override
-            public ListNoteOccurrencesRequest injectPageSize(
-                ListNoteOccurrencesRequest payload, int pageSize) {
-              return ListNoteOccurrencesRequest.newBuilder(payload).setPageSize(pageSize).build();
-            }
-
-            @Override
-            public Integer extractPageSize(ListNoteOccurrencesRequest payload) {
-              return payload.getPageSize();
-            }
-
-            @Override
-            public String extractNextToken(ListNoteOccurrencesResponse payload) {
-              return payload.getNextPageToken();
-            }
-
-            @Override
-            public Iterable<Occurrence> extractResources(ListNoteOccurrencesResponse payload) {
-              return payload.getOccurrencesList() != null
-                  ? payload.getOccurrencesList()
-                  : ImmutableList.<Occurrence>of();
-            }
-          };
-
-  private static final PagedListResponseFactory<
-          ListOccurrencesRequest, ListOccurrencesResponse, ListOccurrencesPagedResponse>
-      LIST_OCCURRENCES_PAGE_STR_FACT =
-          new PagedListResponseFactory<
-              ListOccurrencesRequest, ListOccurrencesResponse, ListOccurrencesPagedResponse>() {
-            @Override
-            public ApiFuture<ListOccurrencesPagedResponse> getFuturePagedResponse(
-                UnaryCallable<ListOccurrencesRequest, ListOccurrencesResponse> callable,
-                ListOccurrencesRequest request,
-                ApiCallContext context,
-                ApiFuture<ListOccurrencesResponse> futureResponse) {
-              PageContext<ListOccurrencesRequest, ListOccurrencesResponse, Occurrence> pageContext =
-                  PageContext.create(callable, LIST_OCCURRENCES_PAGE_STR_DESC, request, context);
-              return ListOccurrencesPagedResponse.createAsync(pageContext, futureResponse);
-            }
-          };
-
-  private static final PagedListResponseFactory<
-          ListNotesRequest, ListNotesResponse, ListNotesPagedResponse>
-      LIST_NOTES_PAGE_STR_FACT =
-          new PagedListResponseFactory<
-              ListNotesRequest, ListNotesResponse, ListNotesPagedResponse>() {
-            @Override
-            public ApiFuture<ListNotesPagedResponse> getFuturePagedResponse(
-                UnaryCallable<ListNotesRequest, ListNotesResponse> callable,
-                ListNotesRequest request,
-                ApiCallContext context,
-                ApiFuture<ListNotesResponse> futureResponse) {
-              PageContext<ListNotesRequest, ListNotesResponse, Note> pageContext =
-                  PageContext.create(callable, LIST_NOTES_PAGE_STR_DESC, request, context);
-              return ListNotesPagedResponse.createAsync(pageContext, futureResponse);
-            }
-          };
-
-  private static final PagedListResponseFactory<
-          ListNoteOccurrencesRequest, ListNoteOccurrencesResponse, ListNoteOccurrencesPagedResponse>
-      LIST_NOTE_OCCURRENCES_PAGE_STR_FACT =
-          new PagedListResponseFactory<
-              ListNoteOccurrencesRequest,
-              ListNoteOccurrencesResponse,
-              ListNoteOccurrencesPagedResponse>() {
-            @Override
-            public ApiFuture<ListNoteOccurrencesPagedResponse> getFuturePagedResponse(
-                UnaryCallable<ListNoteOccurrencesRequest, ListNoteOccurrencesResponse> callable,
-                ListNoteOccurrencesRequest request,
-                ApiCallContext context,
-                ApiFuture<ListNoteOccurrencesResponse> futureResponse) {
-              PageContext<ListNoteOccurrencesRequest, ListNoteOccurrencesResponse, Occurrence>
-                  pageContext =
-                      PageContext.create(
-                          callable, LIST_NOTE_OCCURRENCES_PAGE_STR_DESC, request, context);
-              return ListNoteOccurrencesPagedResponse.createAsync(pageContext, futureResponse);
-            }
-          };
-
   /** Builder for GrafeasV1Beta1StubSettings. */
   public static class Builder extends StubSettings.Builder<GrafeasV1Beta1StubSettings, Builder> {
     private final ImmutableList<UnaryCallSettings.Builder<?, ?>> unaryMethodSettingsBuilders;
-
     private final UnaryCallSettings.Builder<GetOccurrenceRequest, Occurrence> getOccurrenceSettings;
     private final PagedCallSettings.Builder<
             ListOccurrencesRequest, ListOccurrencesResponse, ListOccurrencesPagedResponse>
@@ -515,7 +517,6 @@ public class GrafeasV1Beta1StubSettings extends StubSettings<GrafeasV1Beta1StubS
     private final UnaryCallSettings.Builder<
             GetVulnerabilityOccurrencesSummaryRequest, VulnerabilityOccurrencesSummary>
         getVulnerabilityOccurrencesSummarySettings;
-
     private static final ImmutableMap<String, ImmutableSet<StatusCode.Code>>
         RETRYABLE_CODE_DEFINITIONS;
 
@@ -523,11 +524,12 @@ public class GrafeasV1Beta1StubSettings extends StubSettings<GrafeasV1Beta1StubS
       ImmutableMap.Builder<String, ImmutableSet<StatusCode.Code>> definitions =
           ImmutableMap.builder();
       definitions.put(
-          "idempotent",
+          "retry_policy_2_codes",
           ImmutableSet.copyOf(
               Lists.<StatusCode.Code>newArrayList(
-                  StatusCode.Code.DEADLINE_EXCEEDED, StatusCode.Code.UNAVAILABLE)));
-      definitions.put("non_idempotent", ImmutableSet.copyOf(Lists.<StatusCode.Code>newArrayList()));
+                  StatusCode.Code.UNAVAILABLE, StatusCode.Code.DEADLINE_EXCEEDED)));
+      definitions.put(
+          "no_retry_3_codes", ImmutableSet.copyOf(Lists.<StatusCode.Code>newArrayList()));
       RETRYABLE_CODE_DEFINITIONS = definitions.build();
     }
 
@@ -541,51 +543,45 @@ public class GrafeasV1Beta1StubSettings extends StubSettings<GrafeasV1Beta1StubS
               .setInitialRetryDelay(Duration.ofMillis(100L))
               .setRetryDelayMultiplier(1.3)
               .setMaxRetryDelay(Duration.ofMillis(60000L))
-              .setInitialRpcTimeout(Duration.ofMillis(20000L))
+              .setInitialRpcTimeout(Duration.ofMillis(30000L))
               .setRpcTimeoutMultiplier(1.0)
-              .setMaxRpcTimeout(Duration.ofMillis(20000L))
-              .setTotalTimeout(Duration.ofMillis(600000L))
+              .setMaxRpcTimeout(Duration.ofMillis(30000L))
+              .setTotalTimeout(Duration.ofMillis(30000L))
               .build();
-      definitions.put("default", settings);
+      definitions.put("retry_policy_2_params", settings);
+      settings =
+          RetrySettings.newBuilder()
+              .setInitialRpcTimeout(Duration.ofMillis(30000L))
+              .setRpcTimeoutMultiplier(1.0)
+              .setMaxRpcTimeout(Duration.ofMillis(30000L))
+              .setTotalTimeout(Duration.ofMillis(30000L))
+              .build();
+      definitions.put("no_retry_3_params", settings);
       RETRY_PARAM_DEFINITIONS = definitions.build();
     }
 
     protected Builder() {
-      this((ClientContext) null);
+      this(((ClientContext) null));
     }
 
     protected Builder(ClientContext clientContext) {
       super(clientContext);
 
       getOccurrenceSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
-
       listOccurrencesSettings = PagedCallSettings.newBuilder(LIST_OCCURRENCES_PAGE_STR_FACT);
-
       deleteOccurrenceSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
-
       createOccurrenceSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
-
       batchCreateOccurrencesSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
-
       updateOccurrenceSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
-
       getOccurrenceNoteSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
-
       getNoteSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
-
       listNotesSettings = PagedCallSettings.newBuilder(LIST_NOTES_PAGE_STR_FACT);
-
       deleteNoteSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
-
       createNoteSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
-
       batchCreateNotesSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
-
       updateNoteSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
-
       listNoteOccurrencesSettings =
           PagedCallSettings.newBuilder(LIST_NOTE_OCCURRENCES_PAGE_STR_FACT);
-
       getVulnerabilityOccurrencesSummarySettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
 
       unaryMethodSettingsBuilders =
@@ -605,97 +601,7 @@ public class GrafeasV1Beta1StubSettings extends StubSettings<GrafeasV1Beta1StubS
               updateNoteSettings,
               listNoteOccurrencesSettings,
               getVulnerabilityOccurrencesSummarySettings);
-
       initDefaults(this);
-    }
-
-    private static Builder createDefault() {
-      Builder builder = new Builder((ClientContext) null);
-      builder.setTransportChannelProvider(defaultTransportChannelProvider());
-      builder.setCredentialsProvider(defaultCredentialsProviderBuilder().build());
-      builder.setInternalHeaderProvider(defaultApiClientHeaderProviderBuilder().build());
-      builder.setEndpoint(getDefaultEndpoint());
-      return initDefaults(builder);
-    }
-
-    private static Builder initDefaults(Builder builder) {
-
-      builder
-          .getOccurrenceSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("idempotent"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
-
-      builder
-          .listOccurrencesSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("idempotent"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
-
-      builder
-          .deleteOccurrenceSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("idempotent"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
-
-      builder
-          .createOccurrenceSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("non_idempotent"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
-
-      builder
-          .batchCreateOccurrencesSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("non_idempotent"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
-
-      builder
-          .updateOccurrenceSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("non_idempotent"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
-
-      builder
-          .getOccurrenceNoteSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("idempotent"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
-
-      builder
-          .getNoteSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("idempotent"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
-
-      builder
-          .listNotesSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("idempotent"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
-
-      builder
-          .deleteNoteSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("idempotent"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
-
-      builder
-          .createNoteSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("non_idempotent"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
-
-      builder
-          .batchCreateNotesSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("non_idempotent"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
-
-      builder
-          .updateNoteSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("non_idempotent"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
-
-      builder
-          .listNoteOccurrencesSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("idempotent"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
-
-      builder
-          .getVulnerabilityOccurrencesSummarySettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("idempotent"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
-
-      return builder;
     }
 
     protected Builder(GrafeasV1Beta1StubSettings settings) {
@@ -737,7 +643,97 @@ public class GrafeasV1Beta1StubSettings extends StubSettings<GrafeasV1Beta1StubS
               getVulnerabilityOccurrencesSummarySettings);
     }
 
-    // NEXT_MAJOR_VER: remove 'throws Exception'
+    private static Builder createDefault() {
+      Builder builder = new Builder(((ClientContext) null));
+
+      builder.setTransportChannelProvider(defaultTransportChannelProvider());
+      builder.setCredentialsProvider(defaultCredentialsProviderBuilder().build());
+      builder.setInternalHeaderProvider(defaultApiClientHeaderProviderBuilder().build());
+      builder.setEndpoint(getDefaultEndpoint());
+
+      return initDefaults(builder);
+    }
+
+    private static Builder initDefaults(Builder builder) {
+      builder
+          .getOccurrenceSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_2_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_2_params"));
+
+      builder
+          .listOccurrencesSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_2_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_2_params"));
+
+      builder
+          .deleteOccurrenceSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_2_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_2_params"));
+
+      builder
+          .createOccurrenceSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("no_retry_3_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("no_retry_3_params"));
+
+      builder
+          .batchCreateOccurrencesSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("no_retry_3_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("no_retry_3_params"));
+
+      builder
+          .updateOccurrenceSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("no_retry_3_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("no_retry_3_params"));
+
+      builder
+          .getOccurrenceNoteSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_2_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_2_params"));
+
+      builder
+          .getNoteSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_2_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_2_params"));
+
+      builder
+          .listNotesSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_2_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_2_params"));
+
+      builder
+          .deleteNoteSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_2_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_2_params"));
+
+      builder
+          .createNoteSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("no_retry_3_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("no_retry_3_params"));
+
+      builder
+          .batchCreateNotesSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("no_retry_3_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("no_retry_3_params"));
+
+      builder
+          .updateNoteSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("no_retry_3_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("no_retry_3_params"));
+
+      builder
+          .listNoteOccurrencesSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_2_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_2_params"));
+
+      builder
+          .getVulnerabilityOccurrencesSummarySettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_2_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_2_params"));
+
+      return builder;
+    }
+
+    // NEXT_MAJOR_VER: remove 'throws Exception'.
     /**
      * Applies the given settings updater function to all of the unary API methods in this service.
      *
