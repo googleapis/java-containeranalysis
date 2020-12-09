@@ -22,7 +22,23 @@ import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
-/** */
+/**
+ *
+ *
+ * <pre>
+ * Retrieves analysis results of Cloud components such as Docker container
+ * images. The Container Analysis API is an implementation of the
+ * [Grafeas](https://grafeas.io) API.
+ * Analysis results are stored as a series of occurrences. An `Occurrence`
+ * contains information about a specific analysis instance on a resource. An
+ * occurrence refers to a `Note`. A note contains details describing the
+ * analysis and is generally stored in a separate project, called a `Provider`.
+ * Multiple occurrences can refer to the same note.
+ * For example, an SSL vulnerability could affect multiple images. In this case,
+ * there would be one note for the vulnerability and an occurrence for each
+ * image with the vulnerability referring to that note.
+ * </pre>
+ */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
     comments = "Source: google/devtools/containeranalysis/v1/containeranalysis.proto")
@@ -251,24 +267,75 @@ public final class ContainerAnalysisGrpc {
     return ContainerAnalysisFutureStub.newStub(factory, channel);
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * Retrieves analysis results of Cloud components such as Docker container
+   * images. The Container Analysis API is an implementation of the
+   * [Grafeas](https://grafeas.io) API.
+   * Analysis results are stored as a series of occurrences. An `Occurrence`
+   * contains information about a specific analysis instance on a resource. An
+   * occurrence refers to a `Note`. A note contains details describing the
+   * analysis and is generally stored in a separate project, called a `Provider`.
+   * Multiple occurrences can refer to the same note.
+   * For example, an SSL vulnerability could affect multiple images. In this case,
+   * there would be one note for the vulnerability and an occurrence for each
+   * image with the vulnerability referring to that note.
+   * </pre>
+   */
   public abstract static class ContainerAnalysisImplBase implements io.grpc.BindableService {
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Sets the access control policy on the specified note or occurrence.
+     * Requires `containeranalysis.notes.setIamPolicy` or
+     * `containeranalysis.occurrences.setIamPolicy` permission if the resource is
+     * a note or an occurrence, respectively.
+     * The resource takes the format `projects/[PROJECT_ID]/notes/[NOTE_ID]` for
+     * notes and `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]` for
+     * occurrences.
+     * </pre>
+     */
     public void setIamPolicy(
         com.google.iam.v1.SetIamPolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.iam.v1.Policy> responseObserver) {
       asyncUnimplementedUnaryCall(getSetIamPolicyMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Gets the access control policy for a note or an occurrence resource.
+     * Requires `containeranalysis.notes.setIamPolicy` or
+     * `containeranalysis.occurrences.setIamPolicy` permission if the resource is
+     * a note or occurrence, respectively.
+     * The resource takes the format `projects/[PROJECT_ID]/notes/[NOTE_ID]` for
+     * notes and `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]` for
+     * occurrences.
+     * </pre>
+     */
     public void getIamPolicy(
         com.google.iam.v1.GetIamPolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.iam.v1.Policy> responseObserver) {
       asyncUnimplementedUnaryCall(getGetIamPolicyMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Returns the permissions that a caller has on the specified note or
+     * occurrence. Requires list permission on the project (for example,
+     * `containeranalysis.notes.list`).
+     * The resource takes the format `projects/[PROJECT_ID]/notes/[NOTE_ID]` for
+     * notes and `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]` for
+     * occurrences.
+     * </pre>
+     */
     public void testIamPermissions(
         com.google.iam.v1.TestIamPermissionsRequest request,
         io.grpc.stub.StreamObserver<com.google.iam.v1.TestIamPermissionsResponse>
@@ -276,7 +343,13 @@ public final class ContainerAnalysisGrpc {
       asyncUnimplementedUnaryCall(getTestIamPermissionsMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Gets a summary of the number and severity of occurrences.
+     * </pre>
+     */
     public void getVulnerabilityOccurrencesSummary(
         com.google.containeranalysis.v1.GetVulnerabilityOccurrencesSummaryRequest request,
         io.grpc.stub.StreamObserver<com.google.containeranalysis.v1.VulnerabilityOccurrencesSummary>
@@ -317,7 +390,23 @@ public final class ContainerAnalysisGrpc {
     }
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * Retrieves analysis results of Cloud components such as Docker container
+   * images. The Container Analysis API is an implementation of the
+   * [Grafeas](https://grafeas.io) API.
+   * Analysis results are stored as a series of occurrences. An `Occurrence`
+   * contains information about a specific analysis instance on a resource. An
+   * occurrence refers to a `Note`. A note contains details describing the
+   * analysis and is generally stored in a separate project, called a `Provider`.
+   * Multiple occurrences can refer to the same note.
+   * For example, an SSL vulnerability could affect multiple images. In this case,
+   * there would be one note for the vulnerability and an occurrence for each
+   * image with the vulnerability referring to that note.
+   * </pre>
+   */
   public static final class ContainerAnalysisStub
       extends io.grpc.stub.AbstractAsyncStub<ContainerAnalysisStub> {
     private ContainerAnalysisStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -330,7 +419,19 @@ public final class ContainerAnalysisGrpc {
       return new ContainerAnalysisStub(channel, callOptions);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Sets the access control policy on the specified note or occurrence.
+     * Requires `containeranalysis.notes.setIamPolicy` or
+     * `containeranalysis.occurrences.setIamPolicy` permission if the resource is
+     * a note or an occurrence, respectively.
+     * The resource takes the format `projects/[PROJECT_ID]/notes/[NOTE_ID]` for
+     * notes and `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]` for
+     * occurrences.
+     * </pre>
+     */
     public void setIamPolicy(
         com.google.iam.v1.SetIamPolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.iam.v1.Policy> responseObserver) {
@@ -340,7 +441,19 @@ public final class ContainerAnalysisGrpc {
           responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Gets the access control policy for a note or an occurrence resource.
+     * Requires `containeranalysis.notes.setIamPolicy` or
+     * `containeranalysis.occurrences.setIamPolicy` permission if the resource is
+     * a note or occurrence, respectively.
+     * The resource takes the format `projects/[PROJECT_ID]/notes/[NOTE_ID]` for
+     * notes and `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]` for
+     * occurrences.
+     * </pre>
+     */
     public void getIamPolicy(
         com.google.iam.v1.GetIamPolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.iam.v1.Policy> responseObserver) {
@@ -350,7 +463,18 @@ public final class ContainerAnalysisGrpc {
           responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Returns the permissions that a caller has on the specified note or
+     * occurrence. Requires list permission on the project (for example,
+     * `containeranalysis.notes.list`).
+     * The resource takes the format `projects/[PROJECT_ID]/notes/[NOTE_ID]` for
+     * notes and `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]` for
+     * occurrences.
+     * </pre>
+     */
     public void testIamPermissions(
         com.google.iam.v1.TestIamPermissionsRequest request,
         io.grpc.stub.StreamObserver<com.google.iam.v1.TestIamPermissionsResponse>
@@ -361,7 +485,13 @@ public final class ContainerAnalysisGrpc {
           responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Gets a summary of the number and severity of occurrences.
+     * </pre>
+     */
     public void getVulnerabilityOccurrencesSummary(
         com.google.containeranalysis.v1.GetVulnerabilityOccurrencesSummaryRequest request,
         io.grpc.stub.StreamObserver<com.google.containeranalysis.v1.VulnerabilityOccurrencesSummary>
@@ -373,7 +503,23 @@ public final class ContainerAnalysisGrpc {
     }
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * Retrieves analysis results of Cloud components such as Docker container
+   * images. The Container Analysis API is an implementation of the
+   * [Grafeas](https://grafeas.io) API.
+   * Analysis results are stored as a series of occurrences. An `Occurrence`
+   * contains information about a specific analysis instance on a resource. An
+   * occurrence refers to a `Note`. A note contains details describing the
+   * analysis and is generally stored in a separate project, called a `Provider`.
+   * Multiple occurrences can refer to the same note.
+   * For example, an SSL vulnerability could affect multiple images. In this case,
+   * there would be one note for the vulnerability and an occurrence for each
+   * image with the vulnerability referring to that note.
+   * </pre>
+   */
   public static final class ContainerAnalysisBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<ContainerAnalysisBlockingStub> {
     private ContainerAnalysisBlockingStub(
@@ -387,24 +533,65 @@ public final class ContainerAnalysisGrpc {
       return new ContainerAnalysisBlockingStub(channel, callOptions);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Sets the access control policy on the specified note or occurrence.
+     * Requires `containeranalysis.notes.setIamPolicy` or
+     * `containeranalysis.occurrences.setIamPolicy` permission if the resource is
+     * a note or an occurrence, respectively.
+     * The resource takes the format `projects/[PROJECT_ID]/notes/[NOTE_ID]` for
+     * notes and `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]` for
+     * occurrences.
+     * </pre>
+     */
     public com.google.iam.v1.Policy setIamPolicy(com.google.iam.v1.SetIamPolicyRequest request) {
       return blockingUnaryCall(getChannel(), getSetIamPolicyMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Gets the access control policy for a note or an occurrence resource.
+     * Requires `containeranalysis.notes.setIamPolicy` or
+     * `containeranalysis.occurrences.setIamPolicy` permission if the resource is
+     * a note or occurrence, respectively.
+     * The resource takes the format `projects/[PROJECT_ID]/notes/[NOTE_ID]` for
+     * notes and `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]` for
+     * occurrences.
+     * </pre>
+     */
     public com.google.iam.v1.Policy getIamPolicy(com.google.iam.v1.GetIamPolicyRequest request) {
       return blockingUnaryCall(getChannel(), getGetIamPolicyMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Returns the permissions that a caller has on the specified note or
+     * occurrence. Requires list permission on the project (for example,
+     * `containeranalysis.notes.list`).
+     * The resource takes the format `projects/[PROJECT_ID]/notes/[NOTE_ID]` for
+     * notes and `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]` for
+     * occurrences.
+     * </pre>
+     */
     public com.google.iam.v1.TestIamPermissionsResponse testIamPermissions(
         com.google.iam.v1.TestIamPermissionsRequest request) {
       return blockingUnaryCall(
           getChannel(), getTestIamPermissionsMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Gets a summary of the number and severity of occurrences.
+     * </pre>
+     */
     public com.google.containeranalysis.v1.VulnerabilityOccurrencesSummary
         getVulnerabilityOccurrencesSummary(
             com.google.containeranalysis.v1.GetVulnerabilityOccurrencesSummaryRequest request) {
@@ -413,7 +600,23 @@ public final class ContainerAnalysisGrpc {
     }
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * Retrieves analysis results of Cloud components such as Docker container
+   * images. The Container Analysis API is an implementation of the
+   * [Grafeas](https://grafeas.io) API.
+   * Analysis results are stored as a series of occurrences. An `Occurrence`
+   * contains information about a specific analysis instance on a resource. An
+   * occurrence refers to a `Note`. A note contains details describing the
+   * analysis and is generally stored in a separate project, called a `Provider`.
+   * Multiple occurrences can refer to the same note.
+   * For example, an SSL vulnerability could affect multiple images. In this case,
+   * there would be one note for the vulnerability and an occurrence for each
+   * image with the vulnerability referring to that note.
+   * </pre>
+   */
   public static final class ContainerAnalysisFutureStub
       extends io.grpc.stub.AbstractFutureStub<ContainerAnalysisFutureStub> {
     private ContainerAnalysisFutureStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -426,21 +629,56 @@ public final class ContainerAnalysisGrpc {
       return new ContainerAnalysisFutureStub(channel, callOptions);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Sets the access control policy on the specified note or occurrence.
+     * Requires `containeranalysis.notes.setIamPolicy` or
+     * `containeranalysis.occurrences.setIamPolicy` permission if the resource is
+     * a note or an occurrence, respectively.
+     * The resource takes the format `projects/[PROJECT_ID]/notes/[NOTE_ID]` for
+     * notes and `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]` for
+     * occurrences.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.google.iam.v1.Policy>
         setIamPolicy(com.google.iam.v1.SetIamPolicyRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getSetIamPolicyMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Gets the access control policy for a note or an occurrence resource.
+     * Requires `containeranalysis.notes.setIamPolicy` or
+     * `containeranalysis.occurrences.setIamPolicy` permission if the resource is
+     * a note or occurrence, respectively.
+     * The resource takes the format `projects/[PROJECT_ID]/notes/[NOTE_ID]` for
+     * notes and `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]` for
+     * occurrences.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.google.iam.v1.Policy>
         getIamPolicy(com.google.iam.v1.GetIamPolicyRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getGetIamPolicyMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Returns the permissions that a caller has on the specified note or
+     * occurrence. Requires list permission on the project (for example,
+     * `containeranalysis.notes.list`).
+     * The resource takes the format `projects/[PROJECT_ID]/notes/[NOTE_ID]` for
+     * notes and `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]` for
+     * occurrences.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.iam.v1.TestIamPermissionsResponse>
         testIamPermissions(com.google.iam.v1.TestIamPermissionsRequest request) {
@@ -448,7 +686,13 @@ public final class ContainerAnalysisGrpc {
           getChannel().newCall(getTestIamPermissionsMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Gets a summary of the number and severity of occurrences.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.containeranalysis.v1.VulnerabilityOccurrencesSummary>
         getVulnerabilityOccurrencesSummary(
