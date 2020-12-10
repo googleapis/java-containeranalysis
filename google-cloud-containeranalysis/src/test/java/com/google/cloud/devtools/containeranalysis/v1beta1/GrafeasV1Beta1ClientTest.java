@@ -116,7 +116,7 @@ public class GrafeasV1Beta1ClientTest {
         Occurrence.newBuilder()
             .setName("name3373707")
             .setResource(Resource.newBuilder().build())
-            .setNoteName("note_name1780787896")
+            .setNoteName("noteName1580946845")
             .setRemediation("remediation779381797")
             .setCreateTime(Timestamp.newBuilder().build())
             .setUpdateTime(Timestamp.newBuilder().build())
@@ -169,7 +169,7 @@ public class GrafeasV1Beta1ClientTest {
             .setParent("parent-995424086")
             .setFilter("filter-1274492040")
             .setPageSize(883849137)
-            .setPageToken("page_token1630607433")
+            .setPageToken("pageToken873572522")
             .build();
 
     ListOccurrencesPagedResponse pagedListResponse = client.listOccurrences(request);
@@ -204,7 +204,7 @@ public class GrafeasV1Beta1ClientTest {
               .setParent("parent-995424086")
               .setFilter("filter-1274492040")
               .setPageSize(883849137)
-              .setPageToken("page_token1630607433")
+              .setPageToken("pageToken873572522")
               .build();
       client.listOccurrences(request);
       Assert.fail("No exception raised");
@@ -255,7 +255,7 @@ public class GrafeasV1Beta1ClientTest {
         Occurrence.newBuilder()
             .setName("name3373707")
             .setResource(Resource.newBuilder().build())
-            .setNoteName("note_name1780787896")
+            .setNoteName("noteName1580946845")
             .setRemediation("remediation779381797")
             .setCreateTime(Timestamp.newBuilder().build())
             .setUpdateTime(Timestamp.newBuilder().build())
@@ -355,7 +355,7 @@ public class GrafeasV1Beta1ClientTest {
         Occurrence.newBuilder()
             .setName("name3373707")
             .setResource(Resource.newBuilder().build())
-            .setNoteName("note_name1780787896")
+            .setNoteName("noteName1580946845")
             .setRemediation("remediation779381797")
             .setCreateTime(Timestamp.newBuilder().build())
             .setUpdateTime(Timestamp.newBuilder().build())
@@ -409,8 +409,8 @@ public class GrafeasV1Beta1ClientTest {
     Note expectedResponse =
         Note.newBuilder()
             .setName("name3373707")
-            .setShortDescription("short_description-235369287")
-            .setLongDescription("long_description-1747792199")
+            .setShortDescription("shortDescription1951089120")
+            .setLongDescription("longDescription1763753952")
             .addAllRelatedUrl(new ArrayList<RelatedUrl>())
             .setExpirationTime(Timestamp.newBuilder().build())
             .setCreateTime(Timestamp.newBuilder().build())
@@ -456,8 +456,8 @@ public class GrafeasV1Beta1ClientTest {
     Note expectedResponse =
         Note.newBuilder()
             .setName("name3373707")
-            .setShortDescription("short_description-235369287")
-            .setLongDescription("long_description-1747792199")
+            .setShortDescription("shortDescription1951089120")
+            .setLongDescription("longDescription1763753952")
             .addAllRelatedUrl(new ArrayList<RelatedUrl>())
             .setExpirationTime(Timestamp.newBuilder().build())
             .setCreateTime(Timestamp.newBuilder().build())
@@ -511,7 +511,7 @@ public class GrafeasV1Beta1ClientTest {
             .setParent("parent-995424086")
             .setFilter("filter-1274492040")
             .setPageSize(883849137)
-            .setPageToken("page_token1630607433")
+            .setPageToken("pageToken873572522")
             .build();
 
     ListNotesPagedResponse pagedListResponse = client.listNotes(request);
@@ -546,7 +546,7 @@ public class GrafeasV1Beta1ClientTest {
               .setParent("parent-995424086")
               .setFilter("filter-1274492040")
               .setPageSize(883849137)
-              .setPageToken("page_token1630607433")
+              .setPageToken("pageToken873572522")
               .build();
       client.listNotes(request);
       Assert.fail("No exception raised");
@@ -594,8 +594,8 @@ public class GrafeasV1Beta1ClientTest {
     Note expectedResponse =
         Note.newBuilder()
             .setName("name3373707")
-            .setShortDescription("short_description-235369287")
-            .setLongDescription("long_description-1747792199")
+            .setShortDescription("shortDescription1951089120")
+            .setLongDescription("longDescription1763753952")
             .addAllRelatedUrl(new ArrayList<RelatedUrl>())
             .setExpirationTime(Timestamp.newBuilder().build())
             .setCreateTime(Timestamp.newBuilder().build())
@@ -607,7 +607,7 @@ public class GrafeasV1Beta1ClientTest {
     CreateNoteRequest request =
         CreateNoteRequest.newBuilder()
             .setParent("parent-995424086")
-            .setNoteId("note_id2129224840")
+            .setNoteId("noteId-1039694675")
             .setNote(Note.newBuilder().build())
             .build();
 
@@ -636,7 +636,7 @@ public class GrafeasV1Beta1ClientTest {
       CreateNoteRequest request =
           CreateNoteRequest.newBuilder()
               .setParent("parent-995424086")
-              .setNoteId("note_id2129224840")
+              .setNoteId("noteId-1039694675")
               .setNote(Note.newBuilder().build())
               .build();
       client.createNote(request);
@@ -696,8 +696,8 @@ public class GrafeasV1Beta1ClientTest {
     Note expectedResponse =
         Note.newBuilder()
             .setName("name3373707")
-            .setShortDescription("short_description-235369287")
-            .setLongDescription("long_description-1747792199")
+            .setShortDescription("shortDescription1951089120")
+            .setLongDescription("longDescription1763753952")
             .addAllRelatedUrl(new ArrayList<RelatedUrl>())
             .setExpirationTime(Timestamp.newBuilder().build())
             .setCreateTime(Timestamp.newBuilder().build())
@@ -763,7 +763,7 @@ public class GrafeasV1Beta1ClientTest {
             .setName("name3373707")
             .setFilter("filter-1274492040")
             .setPageSize(883849137)
-            .setPageToken("page_token1630607433")
+            .setPageToken("pageToken873572522")
             .build();
 
     ListNoteOccurrencesPagedResponse pagedListResponse = client.listNoteOccurrences(request);
@@ -798,7 +798,7 @@ public class GrafeasV1Beta1ClientTest {
               .setName("name3373707")
               .setFilter("filter-1274492040")
               .setPageSize(883849137)
-              .setPageToken("page_token1630607433")
+              .setPageToken("pageToken873572522")
               .build();
       client.listNoteOccurrences(request);
       Assert.fail("No exception raised");
