@@ -72,7 +72,6 @@ import io.grafeas.v1beta1.UpdateOccurrenceRequest;
 import io.grafeas.v1beta1.VulnerabilityOccurrencesSummary;
 import java.io.IOException;
 import java.util.List;
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.threeten.bp.Duration;
 
@@ -174,7 +173,7 @@ public class GrafeasV1Beta1StubSettings extends StubSettings<GrafeasV1Beta1StubS
 
             @Override
             public Iterable<Occurrence> extractResources(ListOccurrencesResponse payload) {
-              return Objects.isNull(payload.getOccurrencesList())
+              return payload.getOccurrencesList() == null
                   ? ImmutableList.<Occurrence>of()
                   : payload.getOccurrencesList();
             }
@@ -210,7 +209,7 @@ public class GrafeasV1Beta1StubSettings extends StubSettings<GrafeasV1Beta1StubS
 
             @Override
             public Iterable<Note> extractResources(ListNotesResponse payload) {
-              return Objects.isNull(payload.getNotesList())
+              return payload.getNotesList() == null
                   ? ImmutableList.<Note>of()
                   : payload.getNotesList();
             }
@@ -250,7 +249,7 @@ public class GrafeasV1Beta1StubSettings extends StubSettings<GrafeasV1Beta1StubS
 
             @Override
             public Iterable<Occurrence> extractResources(ListNoteOccurrencesResponse payload) {
-              return Objects.isNull(payload.getOccurrencesList())
+              return payload.getOccurrencesList() == null
                   ? ImmutableList.<Occurrence>of()
                   : payload.getOccurrencesList();
             }
