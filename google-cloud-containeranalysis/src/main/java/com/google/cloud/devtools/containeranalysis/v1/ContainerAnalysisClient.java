@@ -33,7 +33,6 @@ import com.google.iam.v1.TestIamPermissionsResponse;
 import io.grafeas.v1.GrafeasClient;
 import java.io.IOException;
 import java.util.List;
-import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
@@ -184,7 +183,7 @@ public class ContainerAnalysisClient implements BackgroundResource {
   public final Policy setIamPolicy(ResourceName resource, Policy policy) {
     SetIamPolicyRequest request =
         SetIamPolicyRequest.newBuilder()
-            .setResource(Objects.isNull(resource) ? null : resource.toString())
+            .setResource(resource == null ? null : resource.toString())
             .setPolicy(policy)
             .build();
     return setIamPolicy(request);
@@ -259,7 +258,7 @@ public class ContainerAnalysisClient implements BackgroundResource {
   public final Policy getIamPolicy(ResourceName resource) {
     GetIamPolicyRequest request =
         GetIamPolicyRequest.newBuilder()
-            .setResource(Objects.isNull(resource) ? null : resource.toString())
+            .setResource(resource == null ? null : resource.toString())
             .build();
     return getIamPolicy(request);
   }
@@ -332,7 +331,7 @@ public class ContainerAnalysisClient implements BackgroundResource {
       ResourceName resource, List<String> permissions) {
     TestIamPermissionsRequest request =
         TestIamPermissionsRequest.newBuilder()
-            .setResource(Objects.isNull(resource) ? null : resource.toString())
+            .setResource(resource == null ? null : resource.toString())
             .addAllPermissions(permissions)
             .build();
     return testIamPermissions(request);
@@ -406,7 +405,7 @@ public class ContainerAnalysisClient implements BackgroundResource {
       ProjectName parent, String filter) {
     GetVulnerabilityOccurrencesSummaryRequest request =
         GetVulnerabilityOccurrencesSummaryRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setFilter(filter)
             .build();
     return getVulnerabilityOccurrencesSummary(request);
