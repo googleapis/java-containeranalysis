@@ -4,23 +4,23 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/java-containeranalysis.git",
-        "sha": "13a39ce092ea149ceae98b7437eaea85f3dcfe11"
+        "sha": "c27a92cdf8f6c3c15c6feb4fa615873e75195294"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "cb7fc620590382a4a2ea6ffdf6f51ae0e77bbbb5",
-        "internalRef": "334682521"
+        "sha": "b11a87f3b54be3a5e42c15020ee1e0781f86da90",
+        "internalRef": "344134135"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "cb7fc620590382a4a2ea6ffdf6f51ae0e77bbbb5",
-        "internalRef": "334682521"
+        "sha": "b11a87f3b54be3a5e42c15020ee1e0781f86da90",
+        "internalRef": "344134135"
       }
     },
     {
@@ -408,6 +408,7 @@
     "proto-google-cloud-containeranalysis-v1beta1/src/main/proto/google/devtools/containeranalysis/v1beta1/build/build.proto",
     "proto-google-cloud-containeranalysis-v1beta1/src/main/proto/google/devtools/containeranalysis/v1beta1/common/common.proto",
     "proto-google-cloud-containeranalysis-v1beta1/src/main/proto/google/devtools/containeranalysis/v1beta1/containeranalysis.proto",
+    "proto-google-cloud-containeranalysis-v1beta1/src/main/proto/google/devtools/containeranalysis/v1beta1/cvss/cvss.proto",
     "proto-google-cloud-containeranalysis-v1beta1/src/main/proto/google/devtools/containeranalysis/v1beta1/deployment/deployment.proto",
     "proto-google-cloud-containeranalysis-v1beta1/src/main/proto/google/devtools/containeranalysis/v1beta1/discovery/discovery.proto",
     "proto-google-cloud-containeranalysis-v1beta1/src/main/proto/google/devtools/containeranalysis/v1beta1/grafeas/grafeas.proto",
