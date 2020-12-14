@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.cloud.devtools.containeranalysis.v1beta1.stub;
 
 import static com.google.cloud.devtools.containeranalysis.v1beta1.ContainerAnalysisV1Beta1Client.ListScanConfigsPagedResponse;
 
-import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
@@ -36,6 +36,7 @@ import com.google.iam.v1.Policy;
 import com.google.iam.v1.SetIamPolicyRequest;
 import com.google.iam.v1.TestIamPermissionsRequest;
 import com.google.iam.v1.TestIamPermissionsResponse;
+import com.google.longrunning.stub.GrpcOperationsStub;
 import io.grpc.MethodDescriptor;
 import io.grpc.protobuf.ProtoUtils;
 import java.io.IOException;
@@ -43,16 +44,14 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND CLASS
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
- * gRPC stub implementation for Container Analysis API.
+ * gRPC stub implementation for the ContainerAnalysisV1Beta1 service API.
  *
  * <p>This class is for advanced usage and reflects the underlying API directly.
  */
-@Generated("by gapic-generator")
-@BetaApi("A restructuring of stub classes is planned, so this may break in the future")
+@Generated("by gapic-generator-java")
 public class GrpcContainerAnalysisV1Beta1Stub extends ContainerAnalysisV1Beta1Stub {
-
   private static final MethodDescriptor<SetIamPolicyRequest, Policy> setIamPolicyMethodDescriptor =
       MethodDescriptor.<SetIamPolicyRequest, Policy>newBuilder()
           .setType(MethodDescriptor.MethodType.UNARY)
@@ -61,6 +60,7 @@ public class GrpcContainerAnalysisV1Beta1Stub extends ContainerAnalysisV1Beta1St
           .setRequestMarshaller(ProtoUtils.marshaller(SetIamPolicyRequest.getDefaultInstance()))
           .setResponseMarshaller(ProtoUtils.marshaller(Policy.getDefaultInstance()))
           .build();
+
   private static final MethodDescriptor<GetIamPolicyRequest, Policy> getIamPolicyMethodDescriptor =
       MethodDescriptor.<GetIamPolicyRequest, Policy>newBuilder()
           .setType(MethodDescriptor.MethodType.UNARY)
@@ -69,6 +69,7 @@ public class GrpcContainerAnalysisV1Beta1Stub extends ContainerAnalysisV1Beta1St
           .setRequestMarshaller(ProtoUtils.marshaller(GetIamPolicyRequest.getDefaultInstance()))
           .setResponseMarshaller(ProtoUtils.marshaller(Policy.getDefaultInstance()))
           .build();
+
   private static final MethodDescriptor<TestIamPermissionsRequest, TestIamPermissionsResponse>
       testIamPermissionsMethodDescriptor =
           MethodDescriptor.<TestIamPermissionsRequest, TestIamPermissionsResponse>newBuilder()
@@ -80,6 +81,7 @@ public class GrpcContainerAnalysisV1Beta1Stub extends ContainerAnalysisV1Beta1St
               .setResponseMarshaller(
                   ProtoUtils.marshaller(TestIamPermissionsResponse.getDefaultInstance()))
               .build();
+
   private static final MethodDescriptor<GetScanConfigRequest, ScanConfig>
       getScanConfigMethodDescriptor =
           MethodDescriptor.<GetScanConfigRequest, ScanConfig>newBuilder()
@@ -90,6 +92,7 @@ public class GrpcContainerAnalysisV1Beta1Stub extends ContainerAnalysisV1Beta1St
                   ProtoUtils.marshaller(GetScanConfigRequest.getDefaultInstance()))
               .setResponseMarshaller(ProtoUtils.marshaller(ScanConfig.getDefaultInstance()))
               .build();
+
   private static final MethodDescriptor<ListScanConfigsRequest, ListScanConfigsResponse>
       listScanConfigsMethodDescriptor =
           MethodDescriptor.<ListScanConfigsRequest, ListScanConfigsResponse>newBuilder()
@@ -101,6 +104,7 @@ public class GrpcContainerAnalysisV1Beta1Stub extends ContainerAnalysisV1Beta1St
               .setResponseMarshaller(
                   ProtoUtils.marshaller(ListScanConfigsResponse.getDefaultInstance()))
               .build();
+
   private static final MethodDescriptor<UpdateScanConfigRequest, ScanConfig>
       updateScanConfigMethodDescriptor =
           MethodDescriptor.<UpdateScanConfigRequest, ScanConfig>newBuilder()
@@ -111,8 +115,6 @@ public class GrpcContainerAnalysisV1Beta1Stub extends ContainerAnalysisV1Beta1St
                   ProtoUtils.marshaller(UpdateScanConfigRequest.getDefaultInstance()))
               .setResponseMarshaller(ProtoUtils.marshaller(ScanConfig.getDefaultInstance()))
               .build();
-
-  private final BackgroundResource backgroundResources;
 
   private final UnaryCallable<SetIamPolicyRequest, Policy> setIamPolicyCallable;
   private final UnaryCallable<GetIamPolicyRequest, Policy> getIamPolicyCallable;
@@ -125,6 +127,8 @@ public class GrpcContainerAnalysisV1Beta1Stub extends ContainerAnalysisV1Beta1St
       listScanConfigsPagedCallable;
   private final UnaryCallable<UpdateScanConfigRequest, ScanConfig> updateScanConfigCallable;
 
+  private final BackgroundResource backgroundResources;
+  private final GrpcOperationsStub operationsStub;
   private final GrpcStubCallableFactory callableFactory;
 
   public static final GrpcContainerAnalysisV1Beta1Stub create(
@@ -144,28 +148,19 @@ public class GrpcContainerAnalysisV1Beta1Stub extends ContainerAnalysisV1Beta1St
         ContainerAnalysisV1Beta1StubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
-  /**
-   * Constructs an instance of GrpcContainerAnalysisV1Beta1Stub, using the given settings. This is
-   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
-   * should be preferred.
-   */
   protected GrpcContainerAnalysisV1Beta1Stub(
       ContainerAnalysisV1Beta1StubSettings settings, ClientContext clientContext)
       throws IOException {
     this(settings, clientContext, new GrpcContainerAnalysisV1Beta1CallableFactory());
   }
 
-  /**
-   * Constructs an instance of GrpcContainerAnalysisV1Beta1Stub, using the given settings. This is
-   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
-   * should be preferred.
-   */
   protected GrpcContainerAnalysisV1Beta1Stub(
       ContainerAnalysisV1Beta1StubSettings settings,
       ClientContext clientContext,
       GrpcStubCallableFactory callableFactory)
       throws IOException {
     this.callableFactory = callableFactory;
+    this.operationsStub = GrpcOperationsStub.create(clientContext, callableFactory);
 
     GrpcCallSettings<SetIamPolicyRequest, Policy> setIamPolicyTransportSettings =
         GrpcCallSettings.<SetIamPolicyRequest, Policy>newBuilder()
@@ -272,7 +267,12 @@ public class GrpcContainerAnalysisV1Beta1Stub extends ContainerAnalysisV1Beta1St
         callableFactory.createUnaryCallable(
             updateScanConfigTransportSettings, settings.updateScanConfigSettings(), clientContext);
 
-    backgroundResources = new BackgroundResourceAggregation(clientContext.getBackgroundResources());
+    this.backgroundResources =
+        new BackgroundResourceAggregation(clientContext.getBackgroundResources());
+  }
+
+  public GrpcOperationsStub getOperationsStub() {
+    return operationsStub;
   }
 
   public UnaryCallable<SetIamPolicyRequest, Policy> setIamPolicyCallable() {
@@ -292,13 +292,13 @@ public class GrpcContainerAnalysisV1Beta1Stub extends ContainerAnalysisV1Beta1St
     return getScanConfigCallable;
   }
 
+  public UnaryCallable<ListScanConfigsRequest, ListScanConfigsResponse> listScanConfigsCallable() {
+    return listScanConfigsCallable;
+  }
+
   public UnaryCallable<ListScanConfigsRequest, ListScanConfigsPagedResponse>
       listScanConfigsPagedCallable() {
     return listScanConfigsPagedCallable;
-  }
-
-  public UnaryCallable<ListScanConfigsRequest, ListScanConfigsResponse> listScanConfigsCallable() {
-    return listScanConfigsCallable;
   }
 
   public UnaryCallable<UpdateScanConfigRequest, ScanConfig> updateScanConfigCallable() {
