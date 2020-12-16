@@ -14,10 +14,9 @@
  * limitations under the License.
  */
 
-package io.grafeas.v1beta1.vulnerability;
+package io.grafeas.v1beta1.image;
 
 import com.google.api.pathtemplate.PathTemplate;
-import com.google.api.resourcenames.ResourceName;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableMap;
 import java.util.ArrayList;
@@ -26,17 +25,22 @@ import java.util.Map;
 
 /** AUTO-GENERATED DOCUMENTATION AND CLASS */
 @javax.annotation.Generated("by GAPIC protoc plugin")
-public class ProjectName implements ResourceName {
+public class OccurrenceName extends IamResourceName {
 
   private static final PathTemplate PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("projects/{project}");
+      PathTemplate.createWithoutUrlEncoding("projects/{project}/occurrences/{occurrence}");
 
   private volatile Map<String, String> fieldValuesMap;
 
   private final String project;
+  private final String occurrence;
 
   public String getProject() {
     return project;
+  }
+
+  public String getOccurrence() {
+    return occurrence;
   }
 
   public static Builder newBuilder() {
@@ -47,39 +51,40 @@ public class ProjectName implements ResourceName {
     return new Builder(this);
   }
 
-  private ProjectName(Builder builder) {
+  private OccurrenceName(Builder builder) {
     project = Preconditions.checkNotNull(builder.getProject());
+    occurrence = Preconditions.checkNotNull(builder.getOccurrence());
   }
 
-  public static ProjectName of(String project) {
-    return newBuilder().setProject(project).build();
+  public static OccurrenceName of(String project, String occurrence) {
+    return newBuilder().setProject(project).setOccurrence(occurrence).build();
   }
 
-  public static String format(String project) {
-    return newBuilder().setProject(project).build().toString();
+  public static String format(String project, String occurrence) {
+    return newBuilder().setProject(project).setOccurrence(occurrence).build().toString();
   }
 
-  public static ProjectName parse(String formattedString) {
+  public static OccurrenceName parse(String formattedString) {
     if (formattedString.isEmpty()) {
       return null;
     }
     Map<String, String> matchMap =
         PATH_TEMPLATE.validatedMatch(
-            formattedString, "ProjectName.parse: formattedString not in valid format");
-    return of(matchMap.get("project"));
+            formattedString, "OccurrenceName.parse: formattedString not in valid format");
+    return of(matchMap.get("project"), matchMap.get("occurrence"));
   }
 
-  public static List<ProjectName> parseList(List<String> formattedStrings) {
-    List<ProjectName> list = new ArrayList<>(formattedStrings.size());
+  public static List<OccurrenceName> parseList(List<String> formattedStrings) {
+    List<OccurrenceName> list = new ArrayList<>(formattedStrings.size());
     for (String formattedString : formattedStrings) {
       list.add(parse(formattedString));
     }
     return list;
   }
 
-  public static List<String> toStringList(List<ProjectName> values) {
+  public static List<String> toStringList(List<OccurrenceName> values) {
     List<String> list = new ArrayList<String>(values.size());
-    for (ProjectName value : values) {
+    for (OccurrenceName value : values) {
       if (value == null) {
         list.add("");
       } else {
@@ -99,6 +104,7 @@ public class ProjectName implements ResourceName {
         if (fieldValuesMap == null) {
           ImmutableMap.Builder<String, String> fieldMapBuilder = ImmutableMap.builder();
           fieldMapBuilder.put("project", project);
+          fieldMapBuilder.put("occurrence", occurrence);
           fieldValuesMap = fieldMapBuilder.build();
         }
       }
@@ -112,16 +118,21 @@ public class ProjectName implements ResourceName {
 
   @Override
   public String toString() {
-    return PATH_TEMPLATE.instantiate("project", project);
+    return PATH_TEMPLATE.instantiate("project", project, "occurrence", occurrence);
   }
 
-  /** Builder for ProjectName. */
+  /** Builder for OccurrenceName. */
   public static class Builder {
 
     private String project;
+    private String occurrence;
 
     public String getProject() {
       return project;
+    }
+
+    public String getOccurrence() {
+      return occurrence;
     }
 
     public Builder setProject(String project) {
@@ -129,14 +140,20 @@ public class ProjectName implements ResourceName {
       return this;
     }
 
-    private Builder() {}
-
-    private Builder(ProjectName projectName) {
-      project = projectName.project;
+    public Builder setOccurrence(String occurrence) {
+      this.occurrence = occurrence;
+      return this;
     }
 
-    public ProjectName build() {
-      return new ProjectName(this);
+    private Builder() {}
+
+    private Builder(OccurrenceName occurrenceName) {
+      project = occurrenceName.project;
+      occurrence = occurrenceName.occurrence;
+    }
+
+    public OccurrenceName build() {
+      return new OccurrenceName(this);
     }
   }
 
@@ -145,9 +162,9 @@ public class ProjectName implements ResourceName {
     if (o == this) {
       return true;
     }
-    if (o instanceof ProjectName) {
-      ProjectName that = (ProjectName) o;
-      return (this.project.equals(that.project));
+    if (o instanceof OccurrenceName) {
+      OccurrenceName that = (OccurrenceName) o;
+      return (this.project.equals(that.project)) && (this.occurrence.equals(that.occurrence));
     }
     return false;
   }
@@ -157,6 +174,8 @@ public class ProjectName implements ResourceName {
     int h = 1;
     h *= 1000003;
     h ^= project.hashCode();
+    h *= 1000003;
+    h ^= occurrence.hashCode();
     return h;
   }
 }

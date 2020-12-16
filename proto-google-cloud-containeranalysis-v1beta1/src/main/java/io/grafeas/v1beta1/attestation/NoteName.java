@@ -14,10 +14,9 @@
  * limitations under the License.
  */
 
-package io.grafeas.v1beta1.vulnerability;
+package io.grafeas.v1beta1.attestation;
 
 import com.google.api.pathtemplate.PathTemplate;
-import com.google.api.resourcenames.ResourceName;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableMap;
 import java.util.ArrayList;
@@ -26,17 +25,22 @@ import java.util.Map;
 
 /** AUTO-GENERATED DOCUMENTATION AND CLASS */
 @javax.annotation.Generated("by GAPIC protoc plugin")
-public class ProjectName implements ResourceName {
+public class NoteName extends IamResourceName {
 
   private static final PathTemplate PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("projects/{project}");
+      PathTemplate.createWithoutUrlEncoding("projects/{project}/notes/{note}");
 
   private volatile Map<String, String> fieldValuesMap;
 
   private final String project;
+  private final String note;
 
   public String getProject() {
     return project;
+  }
+
+  public String getNote() {
+    return note;
   }
 
   public static Builder newBuilder() {
@@ -47,39 +51,40 @@ public class ProjectName implements ResourceName {
     return new Builder(this);
   }
 
-  private ProjectName(Builder builder) {
+  private NoteName(Builder builder) {
     project = Preconditions.checkNotNull(builder.getProject());
+    note = Preconditions.checkNotNull(builder.getNote());
   }
 
-  public static ProjectName of(String project) {
-    return newBuilder().setProject(project).build();
+  public static NoteName of(String project, String note) {
+    return newBuilder().setProject(project).setNote(note).build();
   }
 
-  public static String format(String project) {
-    return newBuilder().setProject(project).build().toString();
+  public static String format(String project, String note) {
+    return newBuilder().setProject(project).setNote(note).build().toString();
   }
 
-  public static ProjectName parse(String formattedString) {
+  public static NoteName parse(String formattedString) {
     if (formattedString.isEmpty()) {
       return null;
     }
     Map<String, String> matchMap =
         PATH_TEMPLATE.validatedMatch(
-            formattedString, "ProjectName.parse: formattedString not in valid format");
-    return of(matchMap.get("project"));
+            formattedString, "NoteName.parse: formattedString not in valid format");
+    return of(matchMap.get("project"), matchMap.get("note"));
   }
 
-  public static List<ProjectName> parseList(List<String> formattedStrings) {
-    List<ProjectName> list = new ArrayList<>(formattedStrings.size());
+  public static List<NoteName> parseList(List<String> formattedStrings) {
+    List<NoteName> list = new ArrayList<>(formattedStrings.size());
     for (String formattedString : formattedStrings) {
       list.add(parse(formattedString));
     }
     return list;
   }
 
-  public static List<String> toStringList(List<ProjectName> values) {
+  public static List<String> toStringList(List<NoteName> values) {
     List<String> list = new ArrayList<String>(values.size());
-    for (ProjectName value : values) {
+    for (NoteName value : values) {
       if (value == null) {
         list.add("");
       } else {
@@ -99,6 +104,7 @@ public class ProjectName implements ResourceName {
         if (fieldValuesMap == null) {
           ImmutableMap.Builder<String, String> fieldMapBuilder = ImmutableMap.builder();
           fieldMapBuilder.put("project", project);
+          fieldMapBuilder.put("note", note);
           fieldValuesMap = fieldMapBuilder.build();
         }
       }
@@ -112,16 +118,21 @@ public class ProjectName implements ResourceName {
 
   @Override
   public String toString() {
-    return PATH_TEMPLATE.instantiate("project", project);
+    return PATH_TEMPLATE.instantiate("project", project, "note", note);
   }
 
-  /** Builder for ProjectName. */
+  /** Builder for NoteName. */
   public static class Builder {
 
     private String project;
+    private String note;
 
     public String getProject() {
       return project;
+    }
+
+    public String getNote() {
+      return note;
     }
 
     public Builder setProject(String project) {
@@ -129,14 +140,20 @@ public class ProjectName implements ResourceName {
       return this;
     }
 
-    private Builder() {}
-
-    private Builder(ProjectName projectName) {
-      project = projectName.project;
+    public Builder setNote(String note) {
+      this.note = note;
+      return this;
     }
 
-    public ProjectName build() {
-      return new ProjectName(this);
+    private Builder() {}
+
+    private Builder(NoteName noteName) {
+      project = noteName.project;
+      note = noteName.note;
+    }
+
+    public NoteName build() {
+      return new NoteName(this);
     }
   }
 
@@ -145,9 +162,9 @@ public class ProjectName implements ResourceName {
     if (o == this) {
       return true;
     }
-    if (o instanceof ProjectName) {
-      ProjectName that = (ProjectName) o;
-      return (this.project.equals(that.project));
+    if (o instanceof NoteName) {
+      NoteName that = (NoteName) o;
+      return (this.project.equals(that.project)) && (this.note.equals(that.note));
     }
     return false;
   }
@@ -157,6 +174,8 @@ public class ProjectName implements ResourceName {
     int h = 1;
     h *= 1000003;
     h ^= project.hashCode();
+    h *= 1000003;
+    h ^= note.hashCode();
     return h;
   }
 }

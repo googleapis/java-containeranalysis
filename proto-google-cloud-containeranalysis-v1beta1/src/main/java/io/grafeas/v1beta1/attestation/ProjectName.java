@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package io.grafeas.v1beta1.vulnerability;
+package io.grafeas.v1beta1.attestation;
 
 import com.google.api.pathtemplate.PathTemplate;
 import com.google.api.resourcenames.ResourceName;
