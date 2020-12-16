@@ -17,7 +17,6 @@
 package com.google.containeranalysis.v1beta1;
 
 import com.google.api.pathtemplate.PathTemplate;
-import com.google.api.resourcenames.ResourceName;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableMap;
 import java.util.ArrayList;
@@ -26,22 +25,22 @@ import java.util.Map;
 
 /** AUTO-GENERATED DOCUMENTATION AND CLASS */
 @javax.annotation.Generated("by GAPIC protoc plugin")
-public class ScanConfigName implements ResourceName {
+public class NoteName extends IamResourceName {
 
   private static final PathTemplate PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("projects/{project}/scanConfigs/{scan_config}");
+      PathTemplate.createWithoutUrlEncoding("projects/{project}/notes/{note}");
 
   private volatile Map<String, String> fieldValuesMap;
 
   private final String project;
-  private final String scanConfig;
+  private final String note;
 
   public String getProject() {
     return project;
   }
 
-  public String getScanConfig() {
-    return scanConfig;
+  public String getNote() {
+    return note;
   }
 
   public static Builder newBuilder() {
@@ -52,40 +51,40 @@ public class ScanConfigName implements ResourceName {
     return new Builder(this);
   }
 
-  private ScanConfigName(Builder builder) {
+  private NoteName(Builder builder) {
     project = Preconditions.checkNotNull(builder.getProject());
-    scanConfig = Preconditions.checkNotNull(builder.getScanConfig());
+    note = Preconditions.checkNotNull(builder.getNote());
   }
 
-  public static ScanConfigName of(String project, String scanConfig) {
-    return newBuilder().setProject(project).setScanConfig(scanConfig).build();
+  public static NoteName of(String project, String note) {
+    return newBuilder().setProject(project).setNote(note).build();
   }
 
-  public static String format(String project, String scanConfig) {
-    return newBuilder().setProject(project).setScanConfig(scanConfig).build().toString();
+  public static String format(String project, String note) {
+    return newBuilder().setProject(project).setNote(note).build().toString();
   }
 
-  public static ScanConfigName parse(String formattedString) {
+  public static NoteName parse(String formattedString) {
     if (formattedString.isEmpty()) {
       return null;
     }
     Map<String, String> matchMap =
         PATH_TEMPLATE.validatedMatch(
-            formattedString, "ScanConfigName.parse: formattedString not in valid format");
-    return of(matchMap.get("project"), matchMap.get("scan_config"));
+            formattedString, "NoteName.parse: formattedString not in valid format");
+    return of(matchMap.get("project"), matchMap.get("note"));
   }
 
-  public static List<ScanConfigName> parseList(List<String> formattedStrings) {
-    List<ScanConfigName> list = new ArrayList<>(formattedStrings.size());
+  public static List<NoteName> parseList(List<String> formattedStrings) {
+    List<NoteName> list = new ArrayList<>(formattedStrings.size());
     for (String formattedString : formattedStrings) {
       list.add(parse(formattedString));
     }
     return list;
   }
 
-  public static List<String> toStringList(List<ScanConfigName> values) {
+  public static List<String> toStringList(List<NoteName> values) {
     List<String> list = new ArrayList<String>(values.size());
-    for (ScanConfigName value : values) {
+    for (NoteName value : values) {
       if (value == null) {
         list.add("");
       } else {
@@ -105,7 +104,7 @@ public class ScanConfigName implements ResourceName {
         if (fieldValuesMap == null) {
           ImmutableMap.Builder<String, String> fieldMapBuilder = ImmutableMap.builder();
           fieldMapBuilder.put("project", project);
-          fieldMapBuilder.put("scanConfig", scanConfig);
+          fieldMapBuilder.put("note", note);
           fieldValuesMap = fieldMapBuilder.build();
         }
       }
@@ -119,21 +118,21 @@ public class ScanConfigName implements ResourceName {
 
   @Override
   public String toString() {
-    return PATH_TEMPLATE.instantiate("project", project, "scan_config", scanConfig);
+    return PATH_TEMPLATE.instantiate("project", project, "note", note);
   }
 
-  /** Builder for ScanConfigName. */
+  /** Builder for NoteName. */
   public static class Builder {
 
     private String project;
-    private String scanConfig;
+    private String note;
 
     public String getProject() {
       return project;
     }
 
-    public String getScanConfig() {
-      return scanConfig;
+    public String getNote() {
+      return note;
     }
 
     public Builder setProject(String project) {
@@ -141,20 +140,20 @@ public class ScanConfigName implements ResourceName {
       return this;
     }
 
-    public Builder setScanConfig(String scanConfig) {
-      this.scanConfig = scanConfig;
+    public Builder setNote(String note) {
+      this.note = note;
       return this;
     }
 
     private Builder() {}
 
-    private Builder(ScanConfigName scanConfigName) {
-      project = scanConfigName.project;
-      scanConfig = scanConfigName.scanConfig;
+    private Builder(NoteName noteName) {
+      project = noteName.project;
+      note = noteName.note;
     }
 
-    public ScanConfigName build() {
-      return new ScanConfigName(this);
+    public NoteName build() {
+      return new NoteName(this);
     }
   }
 
@@ -163,9 +162,9 @@ public class ScanConfigName implements ResourceName {
     if (o == this) {
       return true;
     }
-    if (o instanceof ScanConfigName) {
-      ScanConfigName that = (ScanConfigName) o;
-      return (this.project.equals(that.project)) && (this.scanConfig.equals(that.scanConfig));
+    if (o instanceof NoteName) {
+      NoteName that = (NoteName) o;
+      return (this.project.equals(that.project)) && (this.note.equals(that.note));
     }
     return false;
   }
@@ -176,7 +175,7 @@ public class ScanConfigName implements ResourceName {
     h *= 1000003;
     h ^= project.hashCode();
     h *= 1000003;
-    h ^= scanConfig.hashCode();
+    h ^= note.hashCode();
     return h;
   }
 }
