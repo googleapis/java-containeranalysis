@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *      https://www.apache.org/licenses/LICENSE-2.0
+ *     https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.google.cloud.devtools.containeranalysis.v1;
 
 import com.google.api.core.ApiFunction;
@@ -38,7 +37,7 @@ import java.io.IOException;
 import java.util.List;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND CLASS.
+// AUTO-GENERATED DOCUMENTATION AND CLASS
 /**
  * Settings class to configure an instance of {@link ContainerAnalysisClient}.
  *
@@ -56,24 +55,23 @@ import javax.annotation.Generated;
  *
  * <p>For example, to set the total timeout of setIamPolicy to 30 seconds:
  *
- * <pre>{@code
+ * <pre>
+ * <code>
  * ContainerAnalysisSettings.Builder containerAnalysisSettingsBuilder =
  *     ContainerAnalysisSettings.newBuilder();
  * containerAnalysisSettingsBuilder
  *     .setIamPolicySettings()
  *     .setRetrySettings(
- *         containerAnalysisSettingsBuilder
- *             .setIamPolicySettings()
- *             .getRetrySettings()
- *             .toBuilder()
+ *         containerAnalysisSettingsBuilder.setIamPolicySettings().getRetrySettings().toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
  * ContainerAnalysisSettings containerAnalysisSettings = containerAnalysisSettingsBuilder.build();
- * }</pre>
+ * </code>
+ * </pre>
  */
-@Generated("by gapic-generator-java")
+@Generated("by gapic-generator")
+@BetaApi
 public class ContainerAnalysisSettings extends ClientSettings<ContainerAnalysisSettings> {
-
   /** Returns the object with the settings used for calls to setIamPolicy. */
   public UnaryCallSettings<SetIamPolicyRequest, Policy> setIamPolicySettings() {
     return ((ContainerAnalysisStubSettings) getStubSettings()).setIamPolicySettings();
@@ -158,13 +156,16 @@ public class ContainerAnalysisSettings extends ClientSettings<ContainerAnalysisS
 
   /** Builder for ContainerAnalysisSettings. */
   public static class Builder extends ClientSettings.Builder<ContainerAnalysisSettings, Builder> {
-
     protected Builder() throws IOException {
-      this(((ClientContext) null));
+      this((ClientContext) null);
     }
 
     protected Builder(ClientContext clientContext) {
       super(ContainerAnalysisStubSettings.newBuilder(clientContext));
+    }
+
+    private static Builder createDefault() {
+      return new Builder(ContainerAnalysisStubSettings.newBuilder());
     }
 
     protected Builder(ContainerAnalysisSettings settings) {
@@ -175,15 +176,11 @@ public class ContainerAnalysisSettings extends ClientSettings<ContainerAnalysisS
       super(stubSettings);
     }
 
-    private static Builder createDefault() {
-      return new Builder(ContainerAnalysisStubSettings.newBuilder());
-    }
-
     public ContainerAnalysisStubSettings.Builder getStubSettingsBuilder() {
       return ((ContainerAnalysisStubSettings.Builder) getStubSettings());
     }
 
-    // NEXT_MAJOR_VER: remove 'throws Exception'.
+    // NEXT_MAJOR_VER: remove 'throws Exception'
     /**
      * Applies the given settings updater function to all of the unary API methods in this service.
      *
