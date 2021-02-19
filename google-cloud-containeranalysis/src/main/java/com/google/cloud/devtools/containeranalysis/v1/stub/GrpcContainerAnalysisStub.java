@@ -120,11 +120,21 @@ public class GrpcContainerAnalysisStub extends ContainerAnalysisStub {
         ContainerAnalysisStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcContainerAnalysisStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcContainerAnalysisStub(
       ContainerAnalysisStubSettings settings, ClientContext clientContext) throws IOException {
     this(settings, clientContext, new GrpcContainerAnalysisCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcContainerAnalysisStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcContainerAnalysisStub(
       ContainerAnalysisStubSettings settings,
       ClientContext clientContext,
