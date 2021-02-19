@@ -81,7 +81,6 @@ import org.threeten.bp.Duration;
  *     containerAnalysisSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class ContainerAnalysisStubSettings extends StubSettings<ContainerAnalysisStubSettings> {
   /** The default scopes of the service. */
