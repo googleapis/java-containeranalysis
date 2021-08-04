@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://www.github.com/googleapis/java-containeranalysis/compare/v1.3.5...v1.4.0) (2021-08-04)
+
+
+### Features
+
+* configure initial sp version ([#634](https://www.github.com/googleapis/java-containeranalysis/issues/634)) ([39e3a69](https://www.github.com/googleapis/java-containeranalysis/commit/39e3a692ee80ebd0dc4f4803c565ac4786e0a8f5))
+
 ### [1.3.5](https://www.github.com/googleapis/java-containeranalysis/compare/v1.3.4...v1.3.5) (2021-07-02)
 
 
