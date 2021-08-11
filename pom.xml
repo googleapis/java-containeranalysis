@@ -71,7 +71,7 @@
       <dependency>
         <groupId>com.google.api.grpc</groupId>
         <artifactId>grpc-google-cloud-containeranalysis-v1beta1</artifactId>
-        <version>0.89.6-SNAPSHOT</version><!-- {x-version-update:grpc-google-cloud-containeranalysis-v1beta1:current} -->
+        <version>0.90.0</version><!-- {x-version-update:grpc-google-cloud-containeranalysis-v1beta1:current} -->
       </dependency>
       <dependency>
         <groupId>com.google.api.grpc</groupId>
