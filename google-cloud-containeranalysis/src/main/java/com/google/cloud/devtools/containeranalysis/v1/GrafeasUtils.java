@@ -31,7 +31,7 @@ class GrafeasUtils {
         .setClock(settings.getClock())
         .setCredentialsProvider(settings.getCredentialsProvider())
         .setEndpoint(settings.getEndpoint())
-        .setBackgroundExecutorProvider(settings.getBackgroundExecutorProvider())
+        .setExecutorProvider(settings.getBackgroundExecutorProvider())
         .setHeaderProvider(settings.getHeaderProvider())
         .setTransportChannelProvider(settings.getTransportChannelProvider())
         .setWatchdogCheckInterval(settings.getWatchdogCheckInterval())
