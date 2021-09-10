@@ -67,6 +67,18 @@ public interface CloudRepoSourceContextOrBuilder
    *
    * <code>string revision_id = 2;</code>
    *
+   * @return Whether the revisionId field is set.
+   */
+  boolean hasRevisionId();
+  /**
+   *
+   *
+   * <pre>
+   * A revision ID.
+   * </pre>
+   *
+   * <code>string revision_id = 2;</code>
+   *
    * @return The revisionId.
    */
   java.lang.String getRevisionId();

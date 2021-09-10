@@ -1,11 +1,11 @@
 /*
- * Copyright 2020 Google LLC
+ * Copyright 2021 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,11 +15,9 @@
  */
 
 /**
- * A client to Container Analysis API.
+ * The interfaces provided are listed below, along with usage samples.
  *
- * <p>The interfaces provided are listed below, along with usage samples.
- *
- * <p>============================== ContainerAnalysisV1Beta1Client ==============================
+ * <p>======================= ContainerAnalysisV1Beta1Client =======================
  *
  * <p>Service Description: Retrieves analysis results of Cloud components such as Docker container
  * images. The Container Analysis API is an implementation of the [Grafeas](grafeas.io) API.
@@ -35,17 +33,16 @@
  *
  * <p>Sample for ContainerAnalysisV1Beta1Client:
  *
- * <pre>
- * <code>
- * try (ContainerAnalysisV1Beta1Client containerAnalysisV1Beta1Client = ContainerAnalysisV1Beta1Client.create()) {
- *   IamResourceName resource = NoteName.of("[PROJECT]", "[NOTE]");
+ * <pre>{@code
+ * try (ContainerAnalysisV1Beta1Client containerAnalysisV1Beta1Client =
+ *     ContainerAnalysisV1Beta1Client.create()) {
+ *   ResourceName resource = BillingAccountName.of("[BILLING_ACCOUNT]");
  *   Policy policy = Policy.newBuilder().build();
  *   Policy response = containerAnalysisV1Beta1Client.setIamPolicy(resource, policy);
  * }
- * </code>
- * </pre>
+ * }</pre>
  *
- * ==================== GrafeasV1Beta1Client ====================
+ * <p>======================= GrafeasV1Beta1Client =======================
  *
  * <p>Service Description: [Grafeas](grafeas.io) API.
  *
@@ -62,16 +59,15 @@
  *
  * <p>Sample for GrafeasV1Beta1Client:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * try (GrafeasV1Beta1Client grafeasV1Beta1Client = GrafeasV1Beta1Client.create()) {
- *   OccurrenceName name = OccurrenceName.of("[PROJECT]", "[OCCURRENCE]");
- *   Occurrence response = grafeasV1Beta1Client.getOccurrence(name);
+ *   GetOccurrenceRequest request =
+ *       GetOccurrenceRequest.newBuilder().setName("name3373707").build();
+ *   Occurrence response = grafeasV1Beta1Client.getOccurrence(request);
  * }
- * </code>
- * </pre>
+ * }</pre>
  */
-@Generated("by gapic-generator")
+@Generated("by gapic-generator-java")
 package com.google.cloud.devtools.containeranalysis.v1beta1;
 
 import javax.annotation.Generated;

@@ -1,11 +1,11 @@
 /*
- * Copyright 2020 Google LLC
+ * Copyright 2021 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.cloud.devtools.containeranalysis.v1beta1;
 
 import static com.google.cloud.devtools.containeranalysis.v1beta1.ContainerAnalysisV1Beta1Client.ListScanConfigsPagedResponse;
@@ -43,7 +44,7 @@ import java.io.IOException;
 import java.util.List;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND CLASS
+// AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Settings class to configure an instance of {@link ContainerAnalysisV1Beta1Client}.
  *
@@ -61,24 +62,27 @@ import javax.annotation.Generated;
  *
  * <p>For example, to set the total timeout of setIamPolicy to 30 seconds:
  *
- * <pre>
- * <code>
+ * <pre>{@code
  * ContainerAnalysisV1Beta1Settings.Builder containerAnalysisV1Beta1SettingsBuilder =
  *     ContainerAnalysisV1Beta1Settings.newBuilder();
  * containerAnalysisV1Beta1SettingsBuilder
  *     .setIamPolicySettings()
  *     .setRetrySettings(
- *         containerAnalysisV1Beta1SettingsBuilder.setIamPolicySettings().getRetrySettings().toBuilder()
+ *         containerAnalysisV1Beta1SettingsBuilder
+ *             .setIamPolicySettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
- * ContainerAnalysisV1Beta1Settings containerAnalysisV1Beta1Settings = containerAnalysisV1Beta1SettingsBuilder.build();
- * </code>
- * </pre>
+ * ContainerAnalysisV1Beta1Settings containerAnalysisV1Beta1Settings =
+ *     containerAnalysisV1Beta1SettingsBuilder.build();
+ * }</pre>
  */
-@Generated("by gapic-generator")
 @BetaApi
+@Generated("by gapic-generator-java")
 public class ContainerAnalysisV1Beta1Settings
     extends ClientSettings<ContainerAnalysisV1Beta1Settings> {
+
   /** Returns the object with the settings used for calls to setIamPolicy. */
   public UnaryCallSettings<SetIamPolicyRequest, Policy> setIamPolicySettings() {
     return ((ContainerAnalysisV1Beta1StubSettings) getStubSettings()).setIamPolicySettings();
@@ -173,16 +177,13 @@ public class ContainerAnalysisV1Beta1Settings
   /** Builder for ContainerAnalysisV1Beta1Settings. */
   public static class Builder
       extends ClientSettings.Builder<ContainerAnalysisV1Beta1Settings, Builder> {
+
     protected Builder() throws IOException {
-      this((ClientContext) null);
+      this(((ClientContext) null));
     }
 
     protected Builder(ClientContext clientContext) {
       super(ContainerAnalysisV1Beta1StubSettings.newBuilder(clientContext));
-    }
-
-    private static Builder createDefault() {
-      return new Builder(ContainerAnalysisV1Beta1StubSettings.newBuilder());
     }
 
     protected Builder(ContainerAnalysisV1Beta1Settings settings) {
@@ -193,18 +194,21 @@ public class ContainerAnalysisV1Beta1Settings
       super(stubSettings);
     }
 
+    private static Builder createDefault() {
+      return new Builder(ContainerAnalysisV1Beta1StubSettings.newBuilder());
+    }
+
     public ContainerAnalysisV1Beta1StubSettings.Builder getStubSettingsBuilder() {
       return ((ContainerAnalysisV1Beta1StubSettings.Builder) getStubSettings());
     }
 
-    // NEXT_MAJOR_VER: remove 'throws Exception'
     /**
      * Applies the given settings updater function to all of the unary API methods in this service.
      *
      * <p>Note: This method does not support applying settings to streaming methods.
      */
     public Builder applyToAllUnaryMethods(
-        ApiFunction<UnaryCallSettings.Builder<?, ?>, Void> settingsUpdater) throws Exception {
+        ApiFunction<UnaryCallSettings.Builder<?, ?>, Void> settingsUpdater) {
       super.applyToAllUnaryMethods(
           getStubSettingsBuilder().unaryMethodSettingsBuilders(), settingsUpdater);
       return this;

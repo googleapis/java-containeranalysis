@@ -301,6 +301,20 @@ public final class GerritSourceContext extends com.google.protobuf.GeneratedMess
    *
    * <code>string revision_id = 3;</code>
    *
+   * @return Whether the revisionId field is set.
+   */
+  public boolean hasRevisionId() {
+    return revisionCase_ == 3;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * A revision (commit) ID.
+   * </pre>
+   *
+   * <code>string revision_id = 3;</code>
+   *
    * @return The revisionId.
    */
   public java.lang.String getRevisionId() {
@@ -1034,6 +1048,21 @@ public final class GerritSourceContext extends com.google.protobuf.GeneratedMess
       return this;
     }
 
+    /**
+     *
+     *
+     * <pre>
+     * A revision (commit) ID.
+     * </pre>
+     *
+     * <code>string revision_id = 3;</code>
+     *
+     * @return Whether the revisionId field is set.
+     */
+    @java.lang.Override
+    public boolean hasRevisionId() {
+      return revisionCase_ == 3;
+    }
     /**
      *
      *

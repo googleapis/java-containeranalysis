@@ -82,10 +82,10 @@ public final class PackageOuterClass {
           + "onKind\022\034\n\030VERSION_KIND_UNSPECIFIED\020\000\022\n\n\006"
           + "NORMAL\020\001\022\013\n\007MINIMUM\020\002\022\013\n\007MAXIMUM\020\003*>\n\014Ar"
           + "chitecture\022\034\n\030ARCHITECTURE_UNSPECIFIED\020\000"
-          + "\022\007\n\003X86\020\001\022\007\n\003X64\020\002Bz\n\026io.grafeas.v1beta1"
-          + ".pkgP\001ZXgoogle.golang.org/genproto/googl"
+          + "\022\007\n\003X86\020\001\022\007\n\003X64\020\002Br\n\026io.grafeas.v1beta1"
+          + ".pkgP\001ZPgoogle.golang.org/genproto/googl"
           + "eapis/devtools/containeranalysis/v1beta1"
-          + "/package;package\242\002\003GRAb\006proto3"
+          + "/package\242\002\003GRAb\006proto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
