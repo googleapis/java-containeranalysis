@@ -1,5 +1,98 @@
 # Changelog
 
+## [3.0.0](https://github.com/googleapis/java-containeranalysis/compare/java-containeranalysis-v2.2.5...java-containeranalysis-v3.0.0) (2022-01-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* release gapic-generator-java v2.0.0 (#637)
+
+### Features
+
+* add `gcf-owl-bot[bot]` to `ignoreAuthors` ([#569](https://github.com/googleapis/java-containeranalysis/issues/569)) ([8b5d99c](https://github.com/googleapis/java-containeranalysis/commit/8b5d99ca6cae1d6a163b48e4216fb546e167e2d4))
+* add GetVulnerabilityOccurrencesSummary rpc ([#265](https://github.com/googleapis/java-containeranalysis/issues/265)) ([e5ab75f](https://github.com/googleapis/java-containeranalysis/commit/e5ab75f50532a38e67aafc8ddaf1efbcee561ddb))
+* Introduce Native Image testing build script changes ([#733](https://github.com/googleapis/java-containeranalysis/issues/733)) ([2b2e65f](https://github.com/googleapis/java-containeranalysis/commit/2b2e65ffbe3da4a27070a0e6e15af9f1f42ef8fb))
+* release gapic-generator-java v2.0.0 ([#637](https://github.com/googleapis/java-containeranalysis/issues/637)) ([c59cddd](https://github.com/googleapis/java-containeranalysis/commit/c59cddd78fc47f0eb3e746f4ef84356b15554c8e))
+* trigger release ([#655](https://github.com/googleapis/java-containeranalysis/issues/655)) ([dfebab3](https://github.com/googleapis/java-containeranalysis/commit/dfebab3768e67020a409d3e749f2e8db6928798e))
+
+
+### Bug Fixes
+
+* Add `shopt -s nullglob` to dependencies script ([#611](https://github.com/googleapis/java-containeranalysis/issues/611)) ([a256e57](https://github.com/googleapis/java-containeranalysis/commit/a256e5714d05ba992c96b3b83023c1fa5187379b))
+* **java:** add -ntp flag to native image testing command ([#1299](https://github.com/googleapis/java-containeranalysis/issues/1299)) ([#775](https://github.com/googleapis/java-containeranalysis/issues/775)) ([4ae489f](https://github.com/googleapis/java-containeranalysis/commit/4ae489fc0dc15e23f37859896f073f94d283fc65))
+* **java:** java 17 dependency arguments ([#740](https://github.com/googleapis/java-containeranalysis/issues/740)) ([e9261d2](https://github.com/googleapis/java-containeranalysis/commit/e9261d203ee7b5f577e5d5843845a3a033e4dac3))
+* **java:** run Maven in plain console-friendly mode ([#1301](https://github.com/googleapis/java-containeranalysis/issues/1301)) ([#783](https://github.com/googleapis/java-containeranalysis/issues/783)) ([5402490](https://github.com/googleapis/java-containeranalysis/commit/5402490f073ce7142766f8617f9400a7e8f0e6fb))
+* release scripts from issuing overlapping phases ([#528](https://github.com/googleapis/java-containeranalysis/issues/528)) ([bbb4403](https://github.com/googleapis/java-containeranalysis/commit/bbb4403ceaf2e2976277cd0b4904f422613c9ac0))
+* typo ([#525](https://github.com/googleapis/java-containeranalysis/issues/525)) ([6156397](https://github.com/googleapis/java-containeranalysis/commit/6156397cefe5a88473b05ea48a9102c2a39b8214))
+* Update dependencies.sh to not break on mac ([#607](https://github.com/googleapis/java-containeranalysis/issues/607)) ([217f1db](https://github.com/googleapis/java-containeranalysis/commit/217f1dbfa5a89ce54521f0320c4941730206552d))
+
+
+### Documentation
+
+* generate samples in gapic client classes ([#454](https://github.com/googleapis/java-containeranalysis/issues/454)) ([874915c](https://github.com/googleapis/java-containeranalysis/commit/874915cb9c8f42c1e56824cd4a8de44affbc7dc9))
+
+
+### Dependencies
+
+* update dependency com.google.api.grpc:proto-google-cloud-containeranalysis-v1 to v1.4.0 ([#647](https://github.com/googleapis/java-containeranalysis/issues/647)) ([0baa203](https://github.com/googleapis/java-containeranalysis/commit/0baa2032b64f6c92f9ed80d05addd25823928dc4))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.10.0 ([#253](https://github.com/googleapis/java-containeranalysis/issues/253)) ([af18f8a](https://github.com/googleapis/java-containeranalysis/commit/af18f8a6344b1740089775cbb9a2fcf4afd1dd07))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.10.2 ([#271](https://github.com/googleapis/java-containeranalysis/issues/271)) ([6cc131e](https://github.com/googleapis/java-containeranalysis/commit/6cc131eb009e8786addfffe314206e77af32c345))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.11.0 ([#280](https://github.com/googleapis/java-containeranalysis/issues/280)) ([c9dceca](https://github.com/googleapis/java-containeranalysis/commit/c9dceca55ac4705c700fe538b92abf0b5e01f979))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.12.1 ([#292](https://github.com/googleapis/java-containeranalysis/issues/292)) ([fa93bf8](https://github.com/googleapis/java-containeranalysis/commit/fa93bf8a297fc824c2f902d327e4dad9c3a16c89))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.13.0 ([#299](https://github.com/googleapis/java-containeranalysis/issues/299)) ([437e6cc](https://github.com/googleapis/java-containeranalysis/commit/437e6cc18bed8e147ada105b01360e40349697fb))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.14.1 ([#318](https://github.com/googleapis/java-containeranalysis/issues/318)) ([aa8be24](https://github.com/googleapis/java-containeranalysis/commit/aa8be24106eb6dcb713c54b63f75ebd98216eb5a))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.15.0 ([#331](https://github.com/googleapis/java-containeranalysis/issues/331)) ([fae167b](https://github.com/googleapis/java-containeranalysis/commit/fae167bb5d025916d2e2fac1dd4fb02800d411fe))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.16.0 ([#349](https://github.com/googleapis/java-containeranalysis/issues/349)) ([bf5e44d](https://github.com/googleapis/java-containeranalysis/commit/bf5e44d7c218d802ea8bcd7becdd7c193c763d61))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.16.1 ([3aeb497](https://github.com/googleapis/java-containeranalysis/commit/3aeb4978d48c007266d6c5d4a051153dc696023f))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.17.0 ([#371](https://github.com/googleapis/java-containeranalysis/issues/371)) ([c9e9f13](https://github.com/googleapis/java-containeranalysis/commit/c9e9f132c9f1e50455cd492e4104fa28b7b95556))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.18.0 ([#383](https://github.com/googleapis/java-containeranalysis/issues/383)) ([e15e45d](https://github.com/googleapis/java-containeranalysis/commit/e15e45d53a68e43e51565c543b0d413a4d96c84d))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.19.0 ([#452](https://github.com/googleapis/java-containeranalysis/issues/452)) ([2a1a1ff](https://github.com/googleapis/java-containeranalysis/commit/2a1a1ff5aa28d9dbec1b54f713da5014a93ccb4a))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.20.0 ([#472](https://github.com/googleapis/java-containeranalysis/issues/472)) ([36151c2](https://github.com/googleapis/java-containeranalysis/commit/36151c2970f66eeee4bf1b3d2f35093e7d7233d0))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.20.1 ([#485](https://github.com/googleapis/java-containeranalysis/issues/485)) ([3af08dd](https://github.com/googleapis/java-containeranalysis/commit/3af08dd245b9d85cc395edc734b152d99e805dc3))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.21.0 ([#510](https://github.com/googleapis/java-containeranalysis/issues/510)) ([009a547](https://github.com/googleapis/java-containeranalysis/commit/009a547af1317cd9c098042caeb95122c6c068ba))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.21.1 ([#531](https://github.com/googleapis/java-containeranalysis/issues/531)) ([231fac9](https://github.com/googleapis/java-containeranalysis/commit/231fac96e57a443fcb68ac48a63cda800f130df7))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.9.0 ([#235](https://github.com/googleapis/java-containeranalysis/issues/235)) ([1267733](https://github.com/googleapis/java-containeranalysis/commit/126773397176a587043aba3a7b8706edb3c9f8b3))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v1 ([#535](https://github.com/googleapis/java-containeranalysis/issues/535)) ([7185565](https://github.com/googleapis/java-containeranalysis/commit/71855653010b1a705e8ae17736d8ad020337306a))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v1.1.0 ([#551](https://github.com/googleapis/java-containeranalysis/issues/551)) ([dcc69ad](https://github.com/googleapis/java-containeranalysis/commit/dcc69ad0f51f7a2f1191ec471efe6b6556ccccbb))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v1.2.0 ([#568](https://github.com/googleapis/java-containeranalysis/issues/568)) ([956f32e](https://github.com/googleapis/java-containeranalysis/commit/956f32e29751e179664db06a8a0d3a8284f13ea1))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v1.3.0 ([#593](https://github.com/googleapis/java-containeranalysis/issues/593)) ([78e637f](https://github.com/googleapis/java-containeranalysis/commit/78e637f19e2934f7d58890b1e317dcad92a111c8))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v1.4.0 ([#614](https://github.com/googleapis/java-containeranalysis/issues/614)) ([8b99477](https://github.com/googleapis/java-containeranalysis/commit/8b99477dd5e094eb5d1afccd2f56f600764f18eb))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2 ([#638](https://github.com/googleapis/java-containeranalysis/issues/638)) ([d1b5d27](https://github.com/googleapis/java-containeranalysis/commit/d1b5d27c72746a479c406f97403569cbe689e5f0))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.1.0 ([#665](https://github.com/googleapis/java-containeranalysis/issues/665)) ([41db258](https://github.com/googleapis/java-containeranalysis/commit/41db258ce463ba1dccec7b6a2abeb52340958c5c))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.2.0 ([#683](https://github.com/googleapis/java-containeranalysis/issues/683)) ([76dddc8](https://github.com/googleapis/java-containeranalysis/commit/76dddc86c0024ee9854ad65e62ca5364b025ba6a))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.2.1 ([#703](https://github.com/googleapis/java-containeranalysis/issues/703)) ([2fe5b3a](https://github.com/googleapis/java-containeranalysis/commit/2fe5b3a08629360a5f2fee8d7338a105eabd2cef))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.3.0 ([#710](https://github.com/googleapis/java-containeranalysis/issues/710)) ([db91c79](https://github.com/googleapis/java-containeranalysis/commit/db91c7992d2a19d237bc7e4df5da5eac221e3ce4))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.4.0 ([#734](https://github.com/googleapis/java-containeranalysis/issues/734)) ([7886f2b](https://github.com/googleapis/java-containeranalysis/commit/7886f2b6bd10afe5118ae6b10d6495e3d86d1222))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.5.0 ([#758](https://github.com/googleapis/java-containeranalysis/issues/758)) ([5617fb9](https://github.com/googleapis/java-containeranalysis/commit/5617fb932d23b001064b04ae851c5dbb9ba61e1e))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.5.1 ([#769](https://github.com/googleapis/java-containeranalysis/issues/769)) ([4e8ef60](https://github.com/googleapis/java-containeranalysis/commit/4e8ef60afa02d1310e2e6f008d5ef76f95edd10b))
+* update dependency io.grafeas:grafeas to v1 ([#219](https://github.com/googleapis/java-containeranalysis/issues/219)) ([c9003cb](https://github.com/googleapis/java-containeranalysis/commit/c9003cb2f920dd44f8a013dc154991e4f91e5051))
+* update dependency io.grafeas:grafeas to v1.0.2 ([#254](https://github.com/googleapis/java-containeranalysis/issues/254)) ([c3e09cf](https://github.com/googleapis/java-containeranalysis/commit/c3e09cf0c9d8a5f87d557da527d752b685776c0e))
+* update dependency io.grafeas:grafeas to v1.0.3 ([#316](https://github.com/googleapis/java-containeranalysis/issues/316)) ([1e04bfb](https://github.com/googleapis/java-containeranalysis/commit/1e04bfbdace0365c22994bb4e1f6dc1d18853533))
+* update dependency io.grafeas:grafeas to v1.0.4 ([#321](https://github.com/googleapis/java-containeranalysis/issues/321)) ([32dce19](https://github.com/googleapis/java-containeranalysis/commit/32dce197491eea9cb7596ce29d8301c70bc4f828))
+* update dependency io.grafeas:grafeas to v1.0.5 ([#335](https://github.com/googleapis/java-containeranalysis/issues/335)) ([7451c46](https://github.com/googleapis/java-containeranalysis/commit/7451c461a8aff819e1c3a2b6f74c564fe8bef220))
+* update dependency io.grafeas:grafeas to v1.0.7 ([#384](https://github.com/googleapis/java-containeranalysis/issues/384)) ([fd59f10](https://github.com/googleapis/java-containeranalysis/commit/fd59f1016a8164f11dac30f14a01a55b3e765631))
+* update dependency io.grafeas:grafeas to v1.0.8 ([#403](https://github.com/googleapis/java-containeranalysis/issues/403)) ([9be3c62](https://github.com/googleapis/java-containeranalysis/commit/9be3c62f334002451785329a6b30c629c26693da))
+* update dependency io.grafeas:grafeas to v1.0.9 ([2a1a1ff](https://github.com/googleapis/java-containeranalysis/commit/2a1a1ff5aa28d9dbec1b54f713da5014a93ccb4a))
+* update dependency io.grafeas:grafeas to v1.1.0 ([#496](https://github.com/googleapis/java-containeranalysis/issues/496)) ([cec291a](https://github.com/googleapis/java-containeranalysis/commit/cec291adbe4a6370d2421030997c52040bf309ea))
+* update dependency io.grafeas:grafeas to v1.1.1 ([#501](https://github.com/googleapis/java-containeranalysis/issues/501)) ([d540cbd](https://github.com/googleapis/java-containeranalysis/commit/d540cbd5431e5559c355bd34f8820c0843d6414b))
+* update dependency io.grafeas:grafeas to v1.1.2 ([#516](https://github.com/googleapis/java-containeranalysis/issues/516)) ([0bfd57c](https://github.com/googleapis/java-containeranalysis/commit/0bfd57cff345e2ed598a2b68ffed2a76df43d238))
+* update dependency io.grafeas:grafeas to v1.1.4 ([#537](https://github.com/googleapis/java-containeranalysis/issues/537)) ([077b561](https://github.com/googleapis/java-containeranalysis/commit/077b56106b1208ae00419c32cef22c369672fd6e))
+* update dependency io.grafeas:grafeas to v1.1.5 ([#556](https://github.com/googleapis/java-containeranalysis/issues/556)) ([c1ff255](https://github.com/googleapis/java-containeranalysis/commit/c1ff2553b0a67be420773bd2d6069d91dd0294f6))
+* update dependency io.grafeas:grafeas to v1.2.0 ([#575](https://github.com/googleapis/java-containeranalysis/issues/575)) ([73dc5e6](https://github.com/googleapis/java-containeranalysis/commit/73dc5e6b0d94b6d853122b2e8be5d4bd14ccd25b))
+* update dependency io.grafeas:grafeas to v1.2.1 ([#587](https://github.com/googleapis/java-containeranalysis/issues/587)) ([22fee49](https://github.com/googleapis/java-containeranalysis/commit/22fee49161722c4136514bcef0805d5a70149fdd))
+* update dependency io.grafeas:grafeas to v1.2.2 ([#601](https://github.com/googleapis/java-containeranalysis/issues/601)) ([740b32e](https://github.com/googleapis/java-containeranalysis/commit/740b32e9e19bdcd83f180057203f67bdfcf4143e))
+* update dependency io.grafeas:grafeas to v1.2.3 ([#615](https://github.com/googleapis/java-containeranalysis/issues/615)) ([64911e9](https://github.com/googleapis/java-containeranalysis/commit/64911e921a65a43e0b1ba8889cebd338d79b05ca))
+* update dependency io.grafeas:grafeas to v1.3.0 ([#649](https://github.com/googleapis/java-containeranalysis/issues/649)) ([13d0dea](https://github.com/googleapis/java-containeranalysis/commit/13d0deaa2e7158be51b3fdcce9201a7ad551b160))
+* update dependency io.grafeas:grafeas to v2 ([#669](https://github.com/googleapis/java-containeranalysis/issues/669)) ([ab693fc](https://github.com/googleapis/java-containeranalysis/commit/ab693fcb1780fbd14b44ad752a6ab88c20ba772e))
+* update dependency io.grafeas:grafeas to v2.0.3 ([#698](https://github.com/googleapis/java-containeranalysis/issues/698)) ([c35d0d6](https://github.com/googleapis/java-containeranalysis/commit/c35d0d60caf209d2a10f46406e2038dd4c08c48d))
+* update dependency io.grafeas:grafeas to v2.0.4 ([#706](https://github.com/googleapis/java-containeranalysis/issues/706)) ([ec3a22b](https://github.com/googleapis/java-containeranalysis/commit/ec3a22b19d084e46693c20aadc969d8553e458f6))
+* update dependency io.grafeas:grafeas to v2.0.5 ([#714](https://github.com/googleapis/java-containeranalysis/issues/714)) ([f3b370b](https://github.com/googleapis/java-containeranalysis/commit/f3b370be26c70d7275b1274c58034f5dc0ccbfd8))
+* update dependency io.grafeas:grafeas to v2.0.6 ([#724](https://github.com/googleapis/java-containeranalysis/issues/724)) ([27d909b](https://github.com/googleapis/java-containeranalysis/commit/27d909b77ccda018f2cd8b71a5185d65054f21e4))
+* update dependency io.grafeas:grafeas to v2.1.0 ([#745](https://github.com/googleapis/java-containeranalysis/issues/745)) ([cd417dd](https://github.com/googleapis/java-containeranalysis/commit/cd417ddb547787c7cf0341684b96816d2da7ffd7))
+* update dependency io.grafeas:grafeas to v2.1.1 ([#749](https://github.com/googleapis/java-containeranalysis/issues/749)) ([191911e](https://github.com/googleapis/java-containeranalysis/commit/191911e24caea774d8afc2dec30af7ce7ad9f6ea))
+* update dependency io.grafeas:grafeas to v2.1.2 ([#762](https://github.com/googleapis/java-containeranalysis/issues/762)) ([76c9c63](https://github.com/googleapis/java-containeranalysis/commit/76c9c631cc2bd54314c79abd272ff81d46814266))
+* update dependency io.grafeas:grafeas to v2.1.3 ([#773](https://github.com/googleapis/java-containeranalysis/issues/773)) ([261a275](https://github.com/googleapis/java-containeranalysis/commit/261a275f692636938415d6343a135e03cae7e5b8))
+
 ### [2.2.5](https://www.github.com/googleapis/java-containeranalysis/compare/v2.2.4...v2.2.5) (2021-12-03)
 
 
