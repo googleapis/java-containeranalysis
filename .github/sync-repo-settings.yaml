@@ -41,3 +41,5 @@ permissionRules:
     permission: push
   - team: cicd
     permission: push
+  - team: aap-dpes
+    permission: push
