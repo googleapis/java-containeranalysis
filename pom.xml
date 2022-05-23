@@ -92,6 +92,11 @@
         <scope>import</scope>
       </dependency>
 
+      <dependency>
+        <groupId>io.perfmark</groupId>
+        <artifactId>perfmark-api</artifactId>
+        <version>0.25.0</version>
+      </dependency>
       <!-- TODO: This should maybe eventually be moved into this repo -->
       <dependency>
         <groupId>io.grafeas</groupId>
