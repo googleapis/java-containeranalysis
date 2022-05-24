@@ -16,7 +16,6 @@
 
 package com.google.cloud.devtools.containeranalysis.v1;
 
-import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.api.resourcenames.ResourceName;
@@ -30,7 +29,6 @@ import com.google.iam.v1.Policy;
 import com.google.iam.v1.SetIamPolicyRequest;
 import com.google.iam.v1.TestIamPermissionsRequest;
 import com.google.iam.v1.TestIamPermissionsResponse;
-import io.grafeas.v1.GrafeasClient;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -71,13 +69,13 @@ import javax.annotation.Generated;
  * methods:
  *
  * <ol>
- *   <li>A "flattened" method. With this type of method, the fields of the request type have been
+ *   <li> A "flattened" method. With this type of method, the fields of the request type have been
  *       converted into function parameters. It may be the case that not all fields are available as
  *       parameters, and not every API method will have a flattened method entry point.
- *   <li>A "request object" method. This type of method only takes one parameter, a request object,
+ *   <li> A "request object" method. This type of method only takes one parameter, a request object,
  *       which must be constructed before the call. Not every API method will have a request object
  *       method.
- *   <li>A "callable" method. This type of method takes no parameters and returns an immutable API
+ *   <li> A "callable" method. This type of method takes no parameters and returns an immutable API
  *       callable object, which can be used to initiate calls to the service.
  * </ol>
  *
@@ -120,14 +118,6 @@ import javax.annotation.Generated;
 public class ContainerAnalysisClient implements BackgroundResource {
   private final ContainerAnalysisSettings settings;
   private final ContainerAnalysisStub stub;
-  /**
-   * Returns a new GrafeasClient with the same configured settings.
-   *
-   * @throws IOException
-   */
-  public GrafeasClient getGrafeasClient() throws IOException {
-    return GrafeasClient.create(GrafeasUtils.transformSettings(settings));
-  }
 
   /** Constructs an instance of ContainerAnalysisClient with default settings. */
   public static final ContainerAnalysisClient create() throws IOException {
@@ -147,7 +137,6 @@ public class ContainerAnalysisClient implements BackgroundResource {
    * Constructs an instance of ContainerAnalysisClient, using the given stub for making calls. This
    * is for advanced usage - prefer using create(ContainerAnalysisSettings).
    */
-  @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final ContainerAnalysisClient create(ContainerAnalysisStub stub) {
     return new ContainerAnalysisClient(stub);
   }
@@ -162,7 +151,6 @@ public class ContainerAnalysisClient implements BackgroundResource {
     this.stub = ((ContainerAnalysisStubSettings) settings.getStubSettings()).createStub();
   }
 
-  @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   protected ContainerAnalysisClient(ContainerAnalysisStub stub) {
     this.settings = null;
     this.stub = stub;
@@ -172,7 +160,6 @@ public class ContainerAnalysisClient implements BackgroundResource {
     return settings;
   }
 
-  @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public ContainerAnalysisStub getStub() {
     return stub;
   }
