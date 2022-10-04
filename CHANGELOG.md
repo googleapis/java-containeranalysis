@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.9](https://github.com/googleapis/java-containeranalysis/compare/v2.4.8...v2.4.9) (2022-10-04)
+
+
+### Bug Fixes
+
+* update protobuf to v3.21.7 ([8d793cb](https://github.com/googleapis/java-containeranalysis/commit/8d793cbf3fbc3abc4c16363850a5cfc6f5cd7227))
+
 ## [2.4.8](https://github.com/googleapis/java-containeranalysis/compare/v2.4.7...v2.4.8) (2022-10-03)
 
 
